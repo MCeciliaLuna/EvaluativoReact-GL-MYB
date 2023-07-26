@@ -1,12 +1,17 @@
+import UserWelcome from "../components/UserWelcome";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import UserWelcomeVideos from "../components/UserWelcomeVideos";
+import UserTopicCategories from "../components/UserTopicCategories";
 
 
 const AdminPage = () => {
   return (
     <>
     <Navbar />
-      <h1>Admin Page 1</h1>
+      <UserWelcome />
+      <UserWelcomeVideos />
+      <UserTopicCategories />
       <Footer />
     </>
   );

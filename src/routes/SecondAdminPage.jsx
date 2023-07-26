@@ -1,12 +1,15 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import SelectedVideo from "../components/SelectedVideo";
+import VideoInteractionSection from "../components/VideoInteractionSection";
 
 
 const SecondAdminPage = () => {
   return (
     <>
     <Navbar />
-      <h1>Admin Page 2</h1>
+      <SelectedVideo />
+      <VideoInteractionSection />
       <Footer />
     </>
   );
