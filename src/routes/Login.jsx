@@ -2,7 +2,7 @@ import Footer from "../components/Footer";
 import LoginForm from "../components/LoginForm";
 import Navbar from "../components/Navbar";
 import Slider from "../components/Slider";
-import TitleWellcome from "../components/TitleWellcome";
+import TitleWelcome from "../components/TitleWelcome";
 
 
 const Login = () => {
@@ -10,7 +10,7 @@ const Login = () => {
   return (
     <>
       <Navbar />
-      <TitleWellcome />
+      <TitleWelcome />
       <LoginForm />
       <Slider />
       <Footer />
