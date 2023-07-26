@@ -1,13 +1,18 @@
 import Footer from "../components/Footer";
+import LoginForm from "../components/LoginForm";
 import Navbar from "../components/Navbar";
+import Slider from "../components/Slider";
+import TitleWellcome from "../components/TitleWellcome";
 
 
 const Login = () => {
 
   return (
     <>
-    <Navbar />
-      <h1>Login</h1>
+      <Navbar />
+      <TitleWellcome />
+      <LoginForm />
+      <Slider />
       <Footer />
     </>
   );
