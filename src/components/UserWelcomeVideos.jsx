@@ -1,6 +1,7 @@
 
 
-const UserWelcomeVideos = () => {
+const UserWelcomeVideos = ({ linksVideos }) => {
+  console.log(linksVideos)
   return (
     <section>
       <div>video</div>
