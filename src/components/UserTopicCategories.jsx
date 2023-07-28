@@ -1,19 +1,12 @@
-
-
-const UserTopicCategories = ({videos}) => {
-  console.log(videos)
+const UserTopicCategories = ({ videoData }) => {
   return (
-    <>
-    <h3>Temas</h3>
-    <li>Categoría</li>
-    <li>Categoría</li>
-    <li>Categoría</li>
-    <li>Categoría</li>
-    <li>Categoría</li>
-    <li>Categoría</li>
-    <li>Categoría</li>
-    <li>Categoría</li>
-    </>
+    <section>
+      {videoData.map((video, index) => (
+        <div key={index}>
+          <p>{video.category}</p>
+        </div>
+      ))}
+    </section>
   );
 };
 

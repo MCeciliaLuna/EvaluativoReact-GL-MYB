@@ -5,12 +5,13 @@ const VideoInteractionSection = () => {
   const { fetchData, response } = commentsApi();
 
   useEffect(() => {
-    fetchData();
-  }, []);
+    fetchData()
+  }, [])
 
   useEffect(() => {
-    console.log(response);
-  }, [response])
+    console.log(response)
+  }, [response]);
+
 
   return (
     <>
@@ -19,12 +20,9 @@ const VideoInteractionSection = () => {
       <button>Pregunta</button>
     </section>
     <section>
-      <div>Opinión</div>
-      <div>Pregunta</div>
-      <div>Opinión</div>
-      <div>Pregunta</div>
-      <div>Pregunta</div>
-      <div>Opinión</div>
+      <div>
+      <p>hola</p>
+      </div>
     </section>
     </>
   );
