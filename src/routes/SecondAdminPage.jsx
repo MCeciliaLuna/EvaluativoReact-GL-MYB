@@ -5,6 +5,7 @@ import VideoInteractionSection from "../components/VideoInteractionSection";
 
 
 const SecondAdminPage = () => {
+
   return (
     <>
     <Navbar />

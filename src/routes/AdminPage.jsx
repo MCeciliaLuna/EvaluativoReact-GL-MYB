@@ -7,17 +7,13 @@ import { videos } from "../api/videosArray";
 
 
 const AdminPage = () => {
-  
-  const linksVideos = videos.map(video => video.urlVideo);
-  
-  const videosArray = videos.map(video => video);
 
   return (
     <>
     <Navbar />
       <UserWelcome />
-      <UserWelcomeVideos linksVideos={linksVideos} />
-      <UserTopicCategories videos={videosArray} />
+      <UserWelcomeVideos videoData={videos} />
+      <UserTopicCategories videoData={videos} />
       <Footer />
     </>
   );
