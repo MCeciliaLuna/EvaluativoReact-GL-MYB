@@ -1,12 +1,12 @@
 import { create } from "zustand";
 import axios from "axios";
 
-const useStore = create((set) => ({
+export const commentsApi = create((set) => ({
   response: null,
   fetchData: async () => {
     try {
       const response = await axios.get(
-        "https://phrasesapi.onrender.com/getHumanWisdom"
+        "https://welearnwebapi.onrender.com/getComments"
       );
       if (response) {
         set({ response: response.data});
@@ -16,5 +16,3 @@ const useStore = create((set) => ({
     }
   },
 }));
-
-export default useStore;
