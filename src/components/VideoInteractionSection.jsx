@@ -1,4 +1,17 @@
+import { useEffect } from "react";
+import { commentsApi } from "../api/commentsApi";
+
 const VideoInteractionSection = () => {
+  const { fetchData, response } = commentsApi();
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    console.log(response);
+  }, [response])
+
   return (
     <>
     <section>
