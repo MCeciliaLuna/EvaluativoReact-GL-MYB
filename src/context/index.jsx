@@ -1,8 +1,13 @@
-import create from "zustand";
+import { createContext, useState } from "react";
 
-const loginState = create((set) => ({
-  login: false,
-  setLogin: (logged) => set({ login: logged }),
-}));
+export const DarkModeContext = createContext();
 
-export default loginState
+export const DarkModeProvider = ({ children }) => {
+  const [darkMode, setDarkMode] = useState(false);
+
+  return (
+    <DarkModeContext.Provider value={[darkMode, setDarkMode]}>
+      {children}
+    </DarkModeContext.Provider>
+  );
+};
