@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import loginState from '../context/index.jsx';
+// import loginState from '../context/index.jsx';
 
 const LoginForm = () => {
   const [username, setUsername] = useState('');
@@ -9,7 +9,7 @@ const LoginForm = () => {
     // aqui puedo hacer las verificaciones.
     // verifico que ambos campos no estén vacíos.
     if (username.trim() !== '' && password.trim() !== '') {
-      loginState.setLogin(true); // Actualiza el estado global para indicar que el usuario está autenticado
+      // loginState.setLogin(true); // Actualiza el estado global para indicar que el usuario está autenticado
     } else {
       alert('Por favor, ingresa un usuario y contraseña válidos.');
     }
