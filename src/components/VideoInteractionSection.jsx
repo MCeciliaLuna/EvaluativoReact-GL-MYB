@@ -1,27 +1,43 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { commentsApi } from "../api/commentsApi";
 
 const VideoInteractionSection = () => {
   const { fetchData, response } = commentsApi();
+  const [comments, setComments] = useState([])
 
   useEffect(() => {
     fetchData()
   }, [])
 
   useEffect(() => {
-    console.log(response)
+   const aleatoryResponse = response?.toSorted(
+    () => 0.5 - Math.random()
+  ).slice(0,10)
+  setComments(aleatoryResponse)
   }, [response]);
 
 
   return (
     <>
     <section>
-      <button>Opina</button>
-      <button>Pregunta</button>
+        <label>
+          Comentar
+      <input type="text" name="" id="" />
+      </label>
+      <button>Comentar</button>
     </section>
     <section>
       <div>
-      <p>hola</p>
+      {
+      comments?.map((comment, index) =>
+      <div key={index}>
+        <hr />
+      <p>{comment.name}</p>
+      <p>{comment.email}</p>
+      <p>{comment.body}</p>
+      </div>
+    )?? <p>loading...</p>
+    }
       </div>
     </section>
     </>

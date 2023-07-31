@@ -6,7 +6,7 @@ export const commentsApi = create((set) => ({
   fetchData: async () => {
     try {
       const response = await axios.get(
-        "https://welearnwebapi.onrender.com/getComments"
+        "https://jsonplaceholder.typicode.com/comments"
       );
       if (response) {
         set({ response: response.data});
