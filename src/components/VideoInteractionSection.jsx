@@ -1,45 +1,74 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
-import { commentsApi } from "../api/commentsApi";
 
 const VideoInteractionSection = () => {
-  const { fetchData, response } = commentsApi();
-  const [comments, setComments] = useState([])
+  const [comments, setComments] = useState([]);
+
+  const getComments = async () => {
+    try {
+      const response = await axios.get(
+        "https://welearnwebapi.onrender.com/getcomments"
+      );
+      const data = response.data;
+      data.reverse();
+      setComments(data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
 
   useEffect(() => {
-    fetchData()
-  }, [])
+    getComments();
+  }, []);
 
-  useEffect(() => {
-   const aleatoryResponse = response?.toSorted(
-    () => 0.5 - Math.random()
-  ).slice(0,10)
-  setComments(aleatoryResponse)
-  }, [response]);
+  const commentData = async (event) => {
+    event.preventDefault();
+    const comment = {
+      userName: document.getElementById("input-username").value,
+      email: document.getElementById("input-email").value,
+      comment: document.getElementById("input-comment").value,
+    };
+    try {
+      const response = await axios.post(
+        "https://welearnwebapi.onrender.com/createComments",
+        comment
+      );
+      const data = response.data;
 
+      console.log(data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
     <>
-    <section>
-        <label>
+      <form>
+        <input type="text" id="input-username" />
+        <input type="email" name="" id="input-email" />
+        <input type="text" name="" id="input-comment" />
+        <button type="submit" onClick={commentData}>
           Comentar
-      <input type="text" name="" id="" />
-      </label>
-      <button>Comentar</button>
-    </section>
-    <section>
-      <div>
-      {
-      comments?.map((comment, index) =>
-      <div key={index}>
-        <hr />
-      <p>{comment.name}</p>
-      <p>{comment.email}</p>
-      <p>{comment.body}</p>
-      </div>
-    )?? <p>loading...</p>
-    }
-      </div>
-    </section>
+        </button>
+      </form>
+      <section>
+        <div>
+          {comments?.map((comment, index) => (
+            <div key={index}>
+              <hr />
+              <p>{comment.userName}</p>
+              <p>{comment.email}</p>
+              <p>{comment.comment}</p>
+              <p>
+                likes: <b>{comment.like}</b> | dislikes:{" "}
+                <b>{comment.disLike}</b>
+              </p>
+              <button>Like</button>
+              <button>Dislike</button>
+            </div>
+          )) ?? <p>loading...</p>}
+        </div>
+      </section>
     </>
   );
 };
