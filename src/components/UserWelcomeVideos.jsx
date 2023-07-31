@@ -5,12 +5,11 @@ const UserWelcomeVideos = ({ videoData }) => {
   )
   const twoVideos = randomVideos.slice(0,2)
 
-  console.log(randomVideos)
-
   return (
     <section>
       {twoVideos.map((video, index) =>
       <div key={index}>
+          <h5>{video.category}</h5>
           <img src={video.image} alt="image-video" />
         </div>)
     }
