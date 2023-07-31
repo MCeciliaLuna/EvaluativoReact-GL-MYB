@@ -1,5 +1,3 @@
-
-
 const UserWelcome = () => {
   return (
     <h1>
