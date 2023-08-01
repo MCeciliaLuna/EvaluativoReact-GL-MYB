@@ -8,7 +8,6 @@ import loginState from "../context/loginStore";
 
 const SecondAdminPage = () => {
   const login = loginState((state) => state.login);
-  // const setLogin = loginState((state) => state.setLogin);
 
   if (!login) {
     return (<Navigate to="/" />)

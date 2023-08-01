@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 const VideoInteractionSection = () => {
   const [comments, setComments] = useState([]);
 
+  const userName = sessionStorage.getItem('userName')
+  const userEmail = sessionStorage.getItem('userEmail')
+
   const getComments = async () => {
     try {
       const response = await axios.get(
@@ -24,8 +27,8 @@ const VideoInteractionSection = () => {
   const commentData = async (event) => {
     event.preventDefault();
     const comment = {
-      userName: document.getElementById("input-username").value,
-      email: document.getElementById("input-email").value,
+      userName: userName,
+      email: userEmail,
       comment: document.getElementById("input-comment").value,
     };
     try {
@@ -34,6 +37,7 @@ const VideoInteractionSection = () => {
         comment
       );
       const data = response.data;
+      getComments()
 
       console.log(data);
     } catch (error) {
@@ -44,8 +48,7 @@ const VideoInteractionSection = () => {
   return (
     <>
       <form>
-        <input type="text" id="input-username" />
-        <input type="email" name="" id="input-email" />
+        <p>What do you think {userName}?</p>
         <input type="text" name="" id="input-comment" />
         <button type="submit" onClick={commentData}>
           Comentar
