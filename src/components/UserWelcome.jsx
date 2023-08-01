@@ -1,7 +1,8 @@
 const UserWelcome = () => {
+  const userName = sessionStorage.getItem('userName')
   return (
     <h1>
-      Bienvenidx <b>Nombredeusuario</b>
+      Bienvenidx <b>{userName}</b>
     </h1>
   );
 };

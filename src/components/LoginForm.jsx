@@ -31,6 +31,8 @@ const LoginForm = () => {
 
     if (userData && userEmail) {
       setLogin(true);
+     sessionStorage.setItem('userName', userData)
+     sessionStorage.setItem('userEmail', userEmail)
     } else {
       toast.error("Ingresá los datos correspondientes");
     }

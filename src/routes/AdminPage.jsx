@@ -10,7 +10,7 @@ import { Navigate } from "react-router-dom";
 
 const AdminPage = () => {
   const login = loginState((state) => state.login);
-  // const setLogin = loginState((state) => state.setLogin);
+
 
   if (!login) {
     return (<Navigate to="/" />)
