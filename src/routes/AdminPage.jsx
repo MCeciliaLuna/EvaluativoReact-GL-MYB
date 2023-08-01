@@ -3,17 +3,16 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import UserWelcomeVideos from "../components/UserWelcomeVideos";
 import UserTopicCategories from "../components/UserTopicCategories";
-import { videos } from "../api/videosArray";
 
 
-const AdminPage = () => {
+const AdminPage = ({videoData}) => {
 
   return (
     <>
     <Navbar />
       <UserWelcome />
-      <UserWelcomeVideos videoData={videos} />
-      <UserTopicCategories videoData={videos} />
+      <UserWelcomeVideos videoData={videoData} />
+      <UserTopicCategories videoData={videoData} />
       <Footer />
     </>
   );

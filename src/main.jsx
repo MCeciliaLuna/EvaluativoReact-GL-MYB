@@ -7,6 +7,7 @@ import AdminPage from './routes/AdminPage'
 import SecondAdminPage from './routes/SecondAdminPage'
 import ErrorPage from "./error-page";
 import ChatRoom from "./routes/ChatRoom";
+import { videos } from "../src/api/videosArray";
 
 const router = createBrowserRouter([
   {
@@ -18,11 +19,15 @@ const router = createBrowserRouter([
   },
   {
     path: "/adminpage",
-    element: <AdminPage />,
+    element: <AdminPage videoData={videos} />,
   },
   {
     path: "/secondadminpage",
-    element: <SecondAdminPage />,
+    element: <SecondAdminPage videoData={videos} />,children: [
+      {
+        path: ":category",
+      },
+    ],
   },
   {
     path: "/chatroom",

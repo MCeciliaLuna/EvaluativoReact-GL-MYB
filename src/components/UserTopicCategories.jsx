@@ -5,7 +5,7 @@ const UserTopicCategories = ({ videoData }) => {
     <section>
       {videoData.map((video, index) => (
         <div key={index}>
-          <Link to="/SecondAdminPage">
+          <Link to={`/secondadminpage/${video.category}`}>
             <p>{video.category}</p>
           </Link>
         </div>
