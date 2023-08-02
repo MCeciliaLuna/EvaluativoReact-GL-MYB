@@ -1,11 +1,13 @@
-import loginState from "../context/loginStore";
+import loginStore from "../store/loginStore";
 import { Navigate } from "react-router-dom";
 
 const Navbar = () => {
-  const setLogin = loginState((state) => state.setLogin);
+  const setLogin = loginStore((state) => state.setLogin);
   
   const logout = () => {
     setLogin(false)
+    sessionStorage.removeItem('userName')
+    sessionStorage.removeItem('userEmail')
    return (<Navigate to="/" />);
   }
 
