@@ -5,4 +5,4 @@ const loginState = create((set) => ({
   setLogin: (logged) => set({ login: logged }),
 }));
 
-export default loginState
+export default loginState;

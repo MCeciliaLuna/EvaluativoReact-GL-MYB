@@ -7,24 +7,21 @@ import { videos } from "../api/videosArray";
 import loginState from "../context/loginStore";
 import { Navigate } from "react-router-dom";
 
-const AdminPage = ({videoData}) => {
-
-const AdminPage = () => {
+const AdminPage = ({ videoData }) => {
   const login = loginState((state) => state.login);
 
-
   if (!login) {
-    return (<Navigate to="/" />)
+    return <Navigate to="/" />;
   }
 
   // const logout = () => {
-  //   setLogin(false) 
+  //   setLogin(false)
   //   return (<Navigate to="/" />);
   // }
 
   return (
     <>
-    <Navbar />
+      <Navbar />
       <UserWelcome />
       <UserWelcomeVideos videoData={videoData} />
       <UserTopicCategories videoData={videoData} />

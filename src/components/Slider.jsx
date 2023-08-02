@@ -1,18 +1,18 @@
-import React from 'react';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import React from "react";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Slider = () => {
   const slides = [
     {
-      imageUrl: 'ruta/de/imagen1.jpg',
-      title: 'Título de la Imagen 1',
-      description: 'Descripción breve de la Imagen 1',
+      imageUrl: "ruta/de/imagen1.jpg",
+      title: "Título de la Imagen 1",
+      description: "Descripción breve de la Imagen 1",
     },
     {
-      imageUrl: 'ruta/de/imagen2.jpg',
-      title: 'Título de la Imagen 2',
-      description: 'Descripción breve de la Imagen 2',
+      imageUrl: "ruta/de/imagen2.jpg",
+      title: "Título de la Imagen 2",
+      description: "Descripción breve de la Imagen 2",
     },
     // Añadir más objetos de imágenes y descripciones aquí...
   ];

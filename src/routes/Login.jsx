@@ -4,9 +4,7 @@ import Navbar from "../components/Navbar";
 import Slider from "../components/Slider";
 import TitleWelcome from "../components/TitleWelcome";
 
-
 const Login = () => {
-
   return (
     <>
       <Navbar />

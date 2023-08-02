@@ -1,4 +1,3 @@
-
 const Navbar = () => {
   return (
     <div>

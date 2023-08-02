@@ -1,5 +1,5 @@
 const UserWelcome = () => {
-  const userName = sessionStorage.getItem('userName')
+  const userName = sessionStorage.getItem("userName");
   return (
     <h1>
       Bienvenidx <b>{userName}</b>

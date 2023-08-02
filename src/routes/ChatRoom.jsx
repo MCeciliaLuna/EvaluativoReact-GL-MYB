@@ -2,13 +2,12 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
 const ChatRoom = () => {
-
-    return (
-      <>
+  return (
+    <>
       <Navbar />
-        <h1>ChatRoom</h1>
-        <Footer />
-      </>
-    );
-  }
+      <h1>ChatRoom</h1>
+      <Footer />
+    </>
+  );
+};
 export default ChatRoom;

@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import { Navigate } from 'react-router-dom';
-import loginState from '../context/loginStore';
+import { Navigate } from "react-router-dom";
+import loginState from "../context/loginStore";
 
 const LoginForm = () => {
   // const [username, setUsername] = useState('');
@@ -31,15 +31,15 @@ const LoginForm = () => {
 
     if (userData && userEmail) {
       setLogin(true);
-     sessionStorage.setItem('userName', userData)
-     sessionStorage.setItem('userEmail', userEmail)
+      sessionStorage.setItem("userName", userData);
+      sessionStorage.setItem("userEmail", userEmail);
     } else {
       toast.error("Ingresá los datos correspondientes");
     }
   };
 
   if (login === true) {
-    return (<Navigate to="/adminpage" />)
+    return <Navigate to="/adminpage" />;
   }
 
   return (
@@ -47,22 +47,28 @@ const LoginForm = () => {
       <Toaster />
       <h1>Iniciar sesión</h1>
       <form>
-      <input
-        type="text"
-        name="username" id="input-username" required
-        //value={username}
-        //onChange={(e) => setUsername(e.target.value)}
-      />
-      <input
-        type="email"
-        name="email" id="input-email" required
-        //value={password}
-        //onChange={(e) => setPassword(e.target.value)}
-      />
-      <button type="button" onClick={() => submitData()}>Iniciar sesión</button>
+        <input
+          type="text"
+          name="username"
+          id="input-username"
+          required
+          //value={username}
+          //onChange={(e) => setUsername(e.target.value)}
+        />
+        <input
+          type="email"
+          name="email"
+          id="input-email"
+          required
+          //value={password}
+          //onChange={(e) => setPassword(e.target.value)}
+        />
+        <button type="button" onClick={() => submitData()}>
+          Iniciar sesión
+        </button>
       </form>
     </div>
   );
-  }
+};
 
-export default LoginForm
+export default LoginForm;

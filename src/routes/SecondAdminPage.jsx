@@ -6,19 +6,18 @@ import VideoInteractionSection from "../components/VideoInteractionSection";
 import loginState from "../context/loginStore";
 
 const SecondAdminPage = ({ videoData }) => {
-const login = loginState((state) => state.login);
-  const { category } = useParams()
+  const login = loginState((state) => state.login);
+  const { category } = useParams();
 
-  const selectedVideo = videoData.find((video) => video.category === category)
-  
+  const selectedVideo = videoData.find((video) => video.category === category);
 
   if (!login) {
-    return (<Navigate to="/" />)
+    return <Navigate to="/" />;
   }
 
   return (
     <>
-    <Navbar />
+      <Navbar />
       <SelectedVideo selectedVideo={selectedVideo} />
       <VideoInteractionSection />
       <Footer />

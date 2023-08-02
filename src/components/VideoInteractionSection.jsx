@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 const VideoInteractionSection = () => {
   const [comments, setComments] = useState([]);
 
-  const userName = sessionStorage.getItem('userName')
-  const userEmail = sessionStorage.getItem('userEmail')
+  const userName = sessionStorage.getItem("userName");
+  const userEmail = sessionStorage.getItem("userEmail");
 
   const getComments = async () => {
     try {
@@ -37,7 +37,7 @@ const VideoInteractionSection = () => {
         comment
       );
       const data = response.data;
-      getComments()
+      getComments();
 
       console.log(data);
     } catch (error) {
