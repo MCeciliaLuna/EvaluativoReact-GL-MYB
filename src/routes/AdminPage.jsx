@@ -7,6 +7,7 @@ import { videos } from "../api/videosArray";
 import loginState from "../context/loginStore";
 import { Navigate } from "react-router-dom";
 
+const AdminPage = ({videoData}) => {
 
 const AdminPage = () => {
   const login = loginState((state) => state.login);
@@ -25,8 +26,8 @@ const AdminPage = () => {
     <>
     <Navbar />
       <UserWelcome />
-      <UserWelcomeVideos videoData={videos} />
-      <UserTopicCategories videoData={videos} />
+      <UserWelcomeVideos videoData={videoData} />
+      <UserTopicCategories videoData={videoData} />
       <Footer />
     </>
   );
