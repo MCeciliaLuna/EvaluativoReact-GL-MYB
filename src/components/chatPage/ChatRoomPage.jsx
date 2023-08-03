@@ -2,8 +2,12 @@ import styles from "./ChatRoomPage.module.css";
 import io from "socket.io-client";
 import { useState,useEffect } from "react";
 
-
-const socket = io("http://localhost:3000");
+const storedUsername = sessionStorage.getItem("userName");
+const socket = io("http://localhost:3000",{
+  query: {
+    username: storedUsername,
+  },
+});
 const ChatRoomPage = () => {
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
