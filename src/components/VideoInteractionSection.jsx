@@ -1,8 +1,9 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 const VideoInteractionSection = () => {
   const [comments, setComments] = useState([]);
+  const commentUser = useRef(null)
 
   const userName = sessionStorage.getItem("userName");
   const userEmail = sessionStorage.getItem("userEmail");
@@ -29,7 +30,7 @@ const VideoInteractionSection = () => {
     const comment = {
       userName: userName,
       email: userEmail,
-      comment: document.getElementById("input-comment").value,
+      comment: commentUser.current.value,
     };
     try {
       const response = await axios.post(
@@ -49,7 +50,7 @@ const VideoInteractionSection = () => {
     <>
       <form>
         <p>What do you think {userName}?</p>
-        <input type="text" name="" id="input-comment" />
+        <input type="text" name="" id="input-comment" ref={commentUser} />
         <button type="submit" onClick={commentData}>
           Comentar
         </button>

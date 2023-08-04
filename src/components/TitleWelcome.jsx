@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "../components/login.module.css";
 
 const TitleWelcome = () => {
