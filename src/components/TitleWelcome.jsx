@@ -1,10 +1,13 @@
-import React from 'react';
+import React from "react";
+import styles from "../components/login.module.css";
 
 const TitleWelcome = () => {
   return (
-    <div>
-      <h1>Bienvenido a nuestra página</h1>
-      <p>¡Gracias por visitarnos! Aquí encontrarás información interesante sobre nuestros productos y servicios.</p>
+    <div className={styles.fondo}>
+      <h1>Bienvenido a Atenea</h1>
+      <p>
+        Aquí encontrarás charlas sobre temáticas de tu interés.
+      </p>
     </div>
   );
 };

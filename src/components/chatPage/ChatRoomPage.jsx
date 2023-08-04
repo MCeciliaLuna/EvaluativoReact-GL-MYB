@@ -3,7 +3,7 @@ import io from "socket.io-client";
 import { useState,useEffect } from "react";
 
 const storedUsername = sessionStorage.getItem("userName");
-const socket = io("http://localhost:3000",{
+const socket = io("https://chat-socket-r9w3.onrender.com",{
   query: {
     username: storedUsername,
   },
