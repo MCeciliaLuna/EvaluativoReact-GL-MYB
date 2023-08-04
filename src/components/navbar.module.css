@@ -1,0 +1,35 @@
+/* navbar.module.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff; /* Color de fondo para la barra de navegación */
+    color: #fff; /* Color de texto para la barra de navegación */
+    padding: 10px; /* Espaciado interno para la barra de navegación */
+  }
+  
+  .navbar h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .navbar-buttons {
+    display: flex; /* Utilizamos flexbox para alinear los botones */
+    gap: 10px; /* Espaciado entre los botones */
+  }
+  
+  .navbar button {
+    padding: 8px 16px;
+    background-color: #fff; /* Color de fondo para los botones */
+    color: #007bff; /* Color de texto para los botones */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave al cambiar el color de fondo */
+  }
+  
+  .navbar button:hover {
+    background-color: #f0f0f0; /* Cambio de color de fondo al pasar el cursor sobre los botones */
+  }
+  

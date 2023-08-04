@@ -1,0 +1,18 @@
+/* footer.module.css */
+.footer {
+    position: fixed; /* Posicionamos el footer de forma fija */
+    bottom: 0; /* Lo ubicamos en la parte inferior */
+    left: 0; /* Lo ubicamos en el lado izquierdo */
+    width: 100%; /* Ajustamos el ancho al 100% para que ocupe todo el ancho de la pantalla */
+    background-color: #72ddf7; /* Color de fondo para el footer */
+    color: #333; /* Color de texto para el footer */
+    padding: 20px; /* Espaciado interno para el footer */
+    text-align: center; /* Centramos el texto en el footer */
+  }
+  
+  .footer h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  

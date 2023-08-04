@@ -2,6 +2,7 @@ import { useRef } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { Navigate } from "react-router-dom";
 import loginStore from "../store/loginStore";
+import styles from "../components/login.module.css";
 
 const LoginForm = () => {
   // const [username, setUsername] = useState('');
@@ -38,7 +39,7 @@ const LoginForm = () => {
   }
 
   return (
-    <div>
+    <div className={styles.fondo}>
       <Toaster />
       <h1>Iniciar sesión</h1>
       <form>
