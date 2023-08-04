@@ -1,14 +1,17 @@
 /* footer.module.css */
 .footer {
-    background-color: #72ddf7; /* Color de fondo para el footer */
-    color: #333; /* Color de texto para el footer */
-    padding: 20px; /* Espaciado interno para el footer */
-    text-align: center; /* Centramos el texto en el footer */
-  }
+  background-color: #72ddf7; /* Color de fondo para el footer */
+  color: #333; /* Color de texto para el footer */
+  padding: 20px; /* Espaciado interno para el footer */
+  text-align: center; /* Centramos el texto en el footer */
+  position: fixed; /* Posición fija */
+  left: 0; /* Alineamos el footer a la izquierda */
+  bottom: 0; /* Alineamos el footer en la parte inferior */
+  width: 100%; /* Ancho del footer al 100% de la página */
+}
   
-  .footer h3 {
-    margin: 0;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
+.footer h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}

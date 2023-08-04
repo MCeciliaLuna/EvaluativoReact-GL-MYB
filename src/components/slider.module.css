@@ -1,53 +1,59 @@
-/* slider.module.css */
 .carousel-root {
-    max-width: 600px; /* Ajustamos el ancho máximo del slider */
-    margin: 0 auto; /* Centramos el slider horizontalmente */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agregamos una sombra al slider */
+  max-width: 100%; /* Ajustamos el ancho máximo del slider para ocupar el espacio disponible */
+  margin: 0 auto; /* Centramos el slider horizontalmente */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agregamos una sombra al slider */
+  position: relative; /* Ajustamos la posición del contenedor */
+  background-color: #f7aef8; /* Color de fondo para el slider, igual al resto de la página */
+  padding: 0; /* Quitamos cualquier padding o margen presente */
+  overflow: hidden; /* Evitamos que el contenido desborde y genere bordes blancos */
+}
+
+.carousel .slide img {
+  width: 100%;
+  max-height: 400px; /* Ajustamos la altura máxima de las imágenes */
+  object-fit: cover; /* Ajustamos el tamaño de las imágenes para cubrir el contenedor */
+  position: absolute; /* Ajustamos la posición de las imágenes */
+  top: 50%; /* Centramos verticalmente */
+  left: 50%; /* Centramos horizontalmente */
+  transform: translate(-50%, -50%); /* Centramos completamente */
+}
+
+.carousel .slide .legend {
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para los títulos y descripciones */
+  color: #fff; /* Color de texto para los títulos y descripciones */
+  padding: 10px; /* Espaciado interno para los títulos y descripciones */
+  position: absolute; /* Posicionamos los títulos y descripciones sobre las imágenes */
+  bottom: 0; /* Los ubicamos en la parte inferior del slider */
+  left: 0; /* Los ubicamos en el lado izquierdo del slider */
+  width: 100%; /* Ajustamos el ancho al 100% para que ocupen todo el ancho del slider */
+}
+
+.carousel .slide .legend h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.carousel .slide .legend p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* Estilos adicionales para pantallas de móviles */
+@media screen and (max-width: 767px) {
+  .carousel-root {
+    max-width: 90%; /* Ajustamos el ancho máximo del slider para pantallas pequeñas */
   }
-  
+
   .carousel .slide img {
-    width: 100%;
-    max-height: 400px; /* Ajustamos la altura máxima de las imágenes */
-    object-fit: cover; /* Ajustamos el tamaño de las imágenes para cubrir el contenedor */
+    max-height: 250px; /* Ajustamos la altura máxima de las imágenes para pantallas pequeñas */
   }
-  
+
   .carousel .slide .legend {
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para los títulos y descripciones */
-    color: #fff; /* Color de texto para los títulos y descripciones */
-    padding: 10px; /* Espaciado interno para los títulos y descripciones */
-    position: absolute; /* Posicionamos los títulos y descripciones sobre las imágenes */
-    bottom: 0; /* Los ubicamos en la parte inferior del slider */
-    left: 0; /* Los ubicamos en el lado izquierdo del slider */
-    width: 100%; /* Ajustamos el ancho al 100% para que ocupen todo el ancho del slider */
+    font-size: 12px; /* Reducimos el tamaño del texto para pantallas pequeñas */
   }
-  
+
   .carousel .slide .legend h3 {
-    margin: 0;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 16px; /* Reducimos el tamaño de los títulos para pantallas pequeñas */
   }
-  
-  .carousel .slide .legend p {
-    margin: 5px 0;
-    font-size: 14px;
-  }
-  
-  /* Estilos adicionales para pantallas de móviles */
-  @media screen and (max-width: 767px) {
-    .carousel-root {
-      max-width: 90%; /* Ajustamos el ancho máximo del slider para pantallas pequeñas */
-    }
-  
-    .carousel .slide img {
-      max-height: 250px; /* Ajustamos la altura máxima de las imágenes para pantallas pequeñas */
-    }
-  
-    .carousel .slide .legend {
-      font-size: 12px; /* Reducimos el tamaño del texto para pantallas pequeñas */
-    }
-  
-    .carousel .slide .legend h3 {
-      font-size: 16px; /* Reducimos el tamaño de los títulos para pantallas pequeñas */
-    }
-  }
-  
+}

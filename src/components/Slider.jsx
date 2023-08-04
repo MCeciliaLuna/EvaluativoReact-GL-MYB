@@ -2,30 +2,21 @@ import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styles from "./slider.module.css"; // Importamos los estilos desde el archivo slider.module.css
+import { videos } from "../api/videosArray"; // Importamos el array de videos desde el archivo videosArray.jsx
 
 const Slider = () => {
-  const slides = [
-    {
-      imageUrl: "ruta/de/imagen1.jpg",
-      title: "Título de la Imagen 1",
-      description: "Descripción breve de la Imagen 1",
-    },
-    {
-      imageUrl: "ruta/de/imagen2.jpg",
-      title: "Título de la Imagen 2",
-      description: "Descripción breve de la Imagen 2",
-    },
-    // imágenes y descripciones aquí...
-  ];
+  // Obtener los últimos 3 videos del array
+  const lastThreeVideos = videos.slice(Math.max(videos.length - 3, 0));
 
   return (
     <Carousel autoPlay infiniteLoop showStatus={false} showThumbs={false} className={styles["carousel-root"]}>
-      {slides.map((slide, index) => (
+      {lastThreeVideos.map((video, index) => (
         <div key={index} className={styles["carousel-slide"]}>
-          <img src={slide.imageUrl} alt={`Imagen ${index + 1}`} />
+          <img src={video.image} alt={`Imagen ${index + 1}`} />
           <div className={styles.legend}>
-            <h3>{slide.title}</h3>
-            <p>{slide.description}</p>
+            <h3>{video.title}</h3>
+            <p>{video.description}</p>
+            <span>{video.category}</span>
           </div>
         </div>
       ))}

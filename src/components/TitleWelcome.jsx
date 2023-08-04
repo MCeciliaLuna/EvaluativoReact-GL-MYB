@@ -2,10 +2,10 @@ import styles from "../components/login.module.css";
 
 const TitleWelcome = () => {
   return (
-    <div className={styles.fondo}>
-      <h1>Bienvenido a Atenea</h1>
+    <div className={styles.titlewellcome}>
+      <h1>Bienvenido a WeLearn</h1>
       <p>
-        Aquí encontrarás charlas sobre temáticas de tu interés.
+      "Pensamos juntos, luego existimos"
       </p>
     </div>
   );
