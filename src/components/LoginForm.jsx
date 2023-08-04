@@ -28,10 +28,10 @@ const LoginForm = () => {
   }
 
   return (
-    <div className={styles.fondo}>
+    <div className={styles.loginform}>
       <Toaster />
       <h1>Iniciar sesión</h1>
-      <form>
+      <form className={styles.form}>
         <input
           type="text"
           name="username"
@@ -39,14 +39,14 @@ const LoginForm = () => {
           ref={usernameRef}
           required
         />
-        <input
+        <input className={styles.input}
           type="email"
           name="email"
           id="input-email"
           ref={emailRef}
           required
         />
-        <button type="button" onClick={() => submitData()}>
+        <button className={styles.button} type="button" onClick={() => submitData()}>
           Iniciar sesión
         </button>
       </form>
