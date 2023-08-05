@@ -5,11 +5,18 @@
   align-items: center;
   background-color: #007bff;
   color: #fff;
-  padding: 10px;
+  padding: 10px 20px; /* Aumentamos el padding para dar más espacio en el Navbar */
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  width: 100%; /* Aumentamos el ancho al 100% para que ocupe toda la pantalla */
+  z-index: 1000; /* Aseguramos que el Navbar esté en la parte superior */
+}
+
+/* Estilo para ocultar el Navbar al pasar la mitad de la página */
+.navbar.hidden {
+  transform: translateY(-100%);
 }
 
 .navbar h2 {
@@ -36,11 +43,3 @@
 .navbar button:hover {
   background-color: #f0f0f0;
 }
-
-/* Estilos adicionales para asegurar que el navbar esté siempre al final */
-body {
-  margin-top: 60px; /* Ajustamos el margen superior para separar el contenido del navbar */
-  
-}
-
-

@@ -1,4 +1,9 @@
 /* login.module.css */
+.pageContainer {
+  background-color: #f7aef8; /* Color de fondo para toda la página */
+}
+
+
 .loginform {
   display: flex;
   flex-direction: column;
@@ -16,7 +21,7 @@
   justify-content: center;
   min-height: 100px;
   background-color: #f7aef8;
-  padding: 20px;
+  padding: 66px;
 }
 
 .loginform h1 {
