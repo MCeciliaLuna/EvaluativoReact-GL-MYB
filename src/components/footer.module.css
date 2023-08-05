@@ -1,17 +1,85 @@
 /* footer.module.css */
-.footer {
-  background-color: #72ddf7; /* Color de fondo para el footer */
-  color: #333; /* Color de texto para el footer */
-  padding: 20px; /* Espaciado interno para el footer */
-  text-align: center; /* Centramos el texto en el footer */
-  position: fixed; /* Posición fija */
-  left: 0; /* Alineamos el footer a la izquierda */
-  bottom: 0; /* Alineamos el footer en la parte inferior */
-  width: 100%; /* Ancho del footer al 100% de la página */
+.piePagina {
+  width: 100%;
+  background-color: #0a141d;
+  /* Aseguramos que el footer ocupe todo el ancho y tenga un color de fondo */
+  padding: 20px;
+  /* Añadimos un espaciado interno para separar el contenido del borde */
+  display: flex;
+  flex-direction: column;
+  /* Utilizamos flexbox con flex-direction para alinear los elementos verticalmente */
+  justify-content: center;
+  align-items: center;
+  /* Centramos los elementos tanto vertical como horizontalmente */
 }
-  
-.footer h3 {
-  margin: 0;
-  font-size: 18px;
-  font-weight: bold;
+
+.grupo1 {
+  width: 100%;
+  max-width: 1200px;
+  /* Limitamos el ancho del contenido */
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 45px 0px;
+}
+
+.grupo1 .box figure {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grupo1 .box figure img {
+  width: 250px;
+}
+
+.grupo1 .box h2 {
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+
+.grupo1 .box p {
+  color: #efefef;
+  margin-bottom: 10px;
+}
+
+.grupo1 .redSocial a {
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  margin-right: 10px;
+  background-color: #0d2033;
+  text-align: center;
+  transition: all 300ms ease;
+}
+
+.grupo1 .redSocial a:hover {
+  color: aqua;
+}
+
+.grupo2 {
+  background-color: #0a1a2a;
+  padding: 15px 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.grupo2 small {
+  font-size: 15px;
+}
+
+@media screen and (max-width: 800px) {
+  .grupo1 {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 35px 0px;
+  }
 }
