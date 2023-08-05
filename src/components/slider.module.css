@@ -1,31 +1,40 @@
 .carousel-root {
-  max-width: 100%; /* Ajustamos el ancho máximo del slider para ocupar el espacio disponible */
-  margin: 0 auto; /* Centramos el slider horizontalmente */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agregamos una sombra al slider */
-  position: relative; /* Ajustamos la posición del contenedor */
-  background-color: #f7aef8; /* Color de fondo para el slider, igual al resto de la página */
-  padding: 0; /* Quitamos cualquier padding o margen presente */
-  overflow: hidden; /* Evitamos que el contenido desborde y genere bordes blancos */
+  max-width: 40%;
+  margin: 40px auto 90px; 
+  border-radius: 20px; 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  position: relative;
+  background-color: #8093f183;
+  padding: 0;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+}
+
+.carousel .slide {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
 }
 
 .carousel .slide img {
-  width: 100%;
-  max-height: 400px; /* Ajustamos la altura máxima de las imágenes */
-  object-fit: cover; /* Ajustamos el tamaño de las imágenes para cubrir el contenedor */
-  position: absolute; /* Ajustamos la posición de las imágenes */
-  top: 50%; /* Centramos verticalmente */
-  left: 50%; /* Centramos horizontalmente */
-  transform: translate(-50%, -50%); /* Centramos completamente */
+  width: 50%;
+  max-height: 400px;
+  object-fit: cover;
 }
 
 .carousel .slide .legend {
-  background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para los títulos y descripciones */
-  color: #fff; /* Color de texto para los títulos y descripciones */
-  padding: 10px; /* Espaciado interno para los títulos y descripciones */
-  position: absolute; /* Posicionamos los títulos y descripciones sobre las imágenes */
-  bottom: 0; /* Los ubicamos en la parte inferior del slider */
-  left: 0; /* Los ubicamos en el lado izquierdo del slider */
-  width: 100%; /* Ajustamos el ancho al 100% para que ocupen todo el ancho del slider */
+  background-color: rgba(128, 128, 128, 0.7);
+  color: #fff;
+  padding: 10px;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: 50%;
+  border-bottom-left-radius: 20px; /* Agregamos bordes redondeados a la esquina inferior izquierda de la descripción */
 }
 
 .carousel .slide .legend h3 {
@@ -42,18 +51,20 @@
 /* Estilos adicionales para pantallas de móviles */
 @media screen and (max-width: 767px) {
   .carousel-root {
-    max-width: 90%; /* Ajustamos el ancho máximo del slider para pantallas pequeñas */
+    max-width: 90%;
   }
 
   .carousel .slide img {
-    max-height: 250px; /* Ajustamos la altura máxima de las imágenes para pantallas pequeñas */
+    max-height: 250px;
   }
 
   .carousel .slide .legend {
-    font-size: 12px; /* Reducimos el tamaño del texto para pantallas pequeñas */
+    font-size: 12px;
+    width: 100%;
+    bottom: 0;
   }
 
   .carousel .slide .legend h3 {
-    font-size: 16px; /* Reducimos el tamaño de los títulos para pantallas pequeñas */
+    font-size: 16px;
   }
 }

@@ -9,6 +9,7 @@ import ErrorPage from "./error-page";
 import ChatRoom from "./routes/ChatRoom";
 import { videos } from "../src/api/videosArray";
 
+
 const router = createBrowserRouter([
   {
     path: "/",

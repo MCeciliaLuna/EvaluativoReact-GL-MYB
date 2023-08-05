@@ -46,7 +46,7 @@ export const videos = [
     urlVideo: "https://www.youtube.com/watch?v=VrtSJDFMwuA",
     image: "https://img.youtube.com/vi/VrtSJDFMwuA/maxresdefault.jpg",
     Title: " SALUD MENTAL - Depresión post pandemia",
-    Description:
+    description:
       "La pandemia del Covid 19 aumentó no solo los casos depresión a nivel mundial, nos hizo ser más conscientes de la importancia de cuidar nuestra salud mental y de buscar ayuda profesional para tratarla.",
     category: "Salud",
   },
