@@ -30,7 +30,7 @@ export const videos = [
     image: "https://img.youtube.com/vi/S4cO1b8xLFw/maxresdefault.jpg",
     title: "EL PODER DE BARBIE - Análisis y verdadero mensaje de la película",
     description:
-      "inalmente se estrenó Barbie, la película dirigida por Greta Gerwig y protagonizada por Margot Robbie, Ryan Gosling y gran elenco. Una de las películas más esperadas del año, en su guión se trabajan ideas muy interesantes, pero siempre respaldadas en el poder de la marca y la idea de Barbie",
+      "Finalmente se estrenó Barbie, la película dirigida por Greta Gerwig y protagonizada por Margot Robbie, Ryan Gosling y gran elenco. Una de las películas más esperadas del año, en su guión se trabajan ideas muy interesantes, pero siempre respaldadas en el poder de la marca y la idea de Barbie",
     category: "Entretenimiento",
   },
   {
@@ -45,7 +45,7 @@ export const videos = [
   {
     urlVideo: "https://www.youtube.com/watch?v=VrtSJDFMwuA",
     image: "https://img.youtube.com/vi/VrtSJDFMwuA/maxresdefault.jpg",
-    Title: " SALUD MENTAL - Depresión post pandemia",
+    title: " SALUD MENTAL - Depresión post pandemia",
     description:
       "La pandemia del Covid 19 aumentó no solo los casos depresión a nivel mundial, nos hizo ser más conscientes de la importancia de cuidar nuestra salud mental y de buscar ayuda profesional para tratarla.",
     category: "Salud",

@@ -1,10 +1,9 @@
-import React from "react";
-import styles from "../components/footer.module.css";
+import styles from "../styles/Footer.module.css";
 
 const Footer = () => {
   return (
-    <footer className={styles.piePagina}>
-      <div className={styles.grupo1}>
+    <footer className={styles.footer}>
+      {/* <div className={styles.grupo1}>
         <div className={styles.box}>
           <figure>
             <a href="#">
@@ -29,9 +28,9 @@ const Footer = () => {
             <a href="#" className="fa fa-youtube"></a>
           </div>
         </div>
-      </div>
-      <div className={styles.grupo2}>
-        <small>&copy; 2023 <b>WeLearn</b> - Todos los Derechos Reservados.</small>
+      </div> */}
+      <div className={styles.data}>
+        <small>&copy; 2023 <b>WeLearn</b> - Todos los Derechos Reservados</small>
       </div>
     </footer>
   );
