@@ -1,13 +1,20 @@
-import styles from "../components/login.module.css";
+import styles from "../styles/TitleWelcome.module.css";
 
 const TitleWelcome = () => {
   return (
-    <div className={styles.titlewellcome}>
-      <h1>Bienvenido a WeLearn</h1>
-      <p>
-      "Pensamos juntos, luego existimos"
+    <section className={styles.section}>
+      <div className={styles.text}>
+      <h1 className={styles.title}>We Learn💡</h1>
+      <p className={styles.subtitle}>
+     &quot;Pensamos juntos, luego existimos&quot;
       </p>
-    </div>
+      <div className={styles.buttoncontainer}>
+      <a href="#login-form">
+      <button className={styles.button}>Ingresá</button>
+      </a>
+      </div>
+      </div>
+    </section>
   );
 };
 

@@ -1,22 +1,23 @@
-/* footer.module.css */
-.piePagina {
-  width: 100%;
-  background-color: #0a141d;
-  /* Aseguramos que el footer ocupe todo el ancho y tenga un color de fondo */
-  padding: 20px;
-  /* Añadimos un espaciado interno para separar el contenido del borde */
+.footer {
+  background-color: var(--text-dark);
+  padding: 1em;
   display: flex;
-  flex-direction: column;
-  /* Utilizamos flexbox con flex-direction para alinear los elementos verticalmente */
   justify-content: center;
   align-items: center;
-  /* Centramos los elementos tanto vertical como horizontalmente */
+  height: 10vh;
 }
 
+.data {
+  text-align: center;
+  color: var(--text-light);
+  font-size: 1.2rem;
+}
+
+
+/* 
 .grupo1 {
   width: 100%;
   max-width: 1200px;
-  /* Limitamos el ancho del contenido */
   margin: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -62,24 +63,4 @@
 
 .grupo1 .redSocial a:hover {
   color: aqua;
-}
-
-.grupo2 {
-  background-color: #0a1a2a;
-  padding: 15px 10px;
-  text-align: center;
-  color: #fff;
-}
-
-.grupo2 small {
-  font-size: 15px;
-}
-
-@media screen and (max-width: 800px) {
-  .grupo1 {
-    width: 90%;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 30px;
-    padding: 35px 0px;
-  }
-}
+} */

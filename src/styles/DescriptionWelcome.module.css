@@ -1,0 +1,21 @@
+.section {
+  background-color: var(--background-cards);
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+  padding: 2em 1em;
+}
+
+.card {
+  margin: 0 auto;
+  background-color: var(--text-light);
+  border-radius: 5px;
+  padding: 1.5em 1em;
+  width: 70vw;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.31);
+  text-align: center;
+}
+
+.argument{
+  font-size: 1.08rem;
+}
