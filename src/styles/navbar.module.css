@@ -1,45 +1,26 @@
-/* navbar.module.css */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px 20px; /* Aumentamos el padding para dar más espacio en el Navbar */
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%; /* Aumentamos el ancho al 100% para que ocupe toda la pantalla */
-  z-index: 1000; /* Aseguramos que el Navbar esté en la parte superior */
+  background-color: var(--background);
 }
 
-/* Estilo para ocultar el Navbar al pasar la mitad de la página */
-.navbar.hidden {
-  transform: translateY(-100%);
+.logo{
+  text-decoration: none;
+  font-family: 'Titles';
+  color: var(--text-light);
+  font-size: 1.5rem;
+  margin: 0.5em;
 }
 
-.navbar h2 {
-  margin: 0;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.navbar-buttons {
+.linkscontainer{
+  margin: 0.5em;
   display: flex;
-  gap: 10px;
+  width: 30vw;
+  justify-content: space-around;
 }
 
-.navbar button {
-  padding: 8px 16px;
-  background-color: #fff;
-  color: #007bff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.navbar button:hover {
-  background-color: #f0f0f0;
+.navlink{
+  text-decoration: none;
+  color: var(--text-light);
 }

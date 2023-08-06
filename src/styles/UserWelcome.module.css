@@ -1,0 +1,37 @@
+.section{
+  background-image: url(../assets/images/background-admin.webp);
+  background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--text-light);
+  text-shadow: 4px 4px 10px rgba(0,0,0,1);
+  text-align: end;
+  height: 35vh;
+  display: flex;
+  align-items: center;
+}
+
+.cover{
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 100vw;
+  height: 35vh;
+  position: absolute;
+  z-index: 0;
+}
+
+.containertext{
+  padding: 1em;
+}
+
+.welcometext{
+ font-size: 2rem;
+ margin: 0.5em;
+}
+
+.username{
+  text-transform: uppercase;
+}
+
+.welcomesecondtext{
+  font-size: 1.2rem;
+  margin: 0.2em;
+}

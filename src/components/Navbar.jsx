@@ -1,32 +1,47 @@
 import loginStore from "../store/loginStore";
-// import { Link, useNavigate  } from "react-router-dom";
-import styles from "../styles/navbar.module.css";
+import { useNavigate, NavLink  } from "react-router-dom";
+import styles from "../styles/Navbar.module.css";
+import chatIcon from "../assets/images/chatIcon";
+import backIcon from "../assets/images/backIcon";
+import outSesionIcon from "../assets/images/outSesionIcon";
+import Swal from 'sweetalert2'
 
 const Navbar = () => {
-  // const setLogin = loginStore((state) => state.setLogin);
-  // const navigate = useNavigate()
+ const setLogin = loginStore((state) => state.setLogin);
+ const navigate = useNavigate()
 
-  // const logout = () => {
-  //   setLogin(false);
-  //   sessionStorage.removeItem('userName');
-  //   sessionStorage.removeItem('userEmail');
-  //   navigate("/");
-  // };
+ const logout = () => {
+ Swal.fire({
+  text: "¿Estás segur@ que querés cerrar sesión?",
+  showCancelButton: true,
+  cancelButtonText:'No',
+  confirmButtonColor: 'var(--background)',
+  cancelButtonColor: 'var(--background-cards)',
+  confirmButtonText: 'Si'
+}).then((result) => {
+  if (result.isConfirmed) {
+    setLogin(false);
+    sessionStorage.removeItem('userName');
+    sessionStorage.removeItem('userEmail');
+    navigate("/");
+  }
+})
 
-  // const back = () => {
-  //   window.history.back();
-  // };
+};
+
+  const back = () => {
+    window.history.back();
+  };
 
   return (
-    <div className={styles.navbar}>
-      <div className={styles["navbar-buttons"]}>
-        {/* <button onClick={logout}>Cerrar sesión</button>
-        <button onClick={back}>Volver atrás</button>
-        <Link to="/chatroom">
-        <button>Chat</button>
-        </Link> */}
+    <nav className={styles.navbar}>
+        <NavLink className={styles.logo} to="/adminpage">WeLearn💡</NavLink>
+      <div className={styles.linkscontainer}>
+        <NavLink className={styles.navlink} onClick={back}>{backIcon}</NavLink>
+        <NavLink className={styles.navlink} to="/chatroom">{chatIcon}</NavLink>
+        <NavLink className={styles.navlink} onClick={logout}>{outSesionIcon}</NavLink>
       </div>
-    </div>
+    </nav>
   );
 };
 
