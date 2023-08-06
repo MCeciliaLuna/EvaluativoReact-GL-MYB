@@ -1,0 +1,30 @@
+.section{
+  margin: 1em;
+  background-color: var(--text-light);
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.title{
+ color: var(--text-dark);
+ font-size: 2rem;
+}
+
+.categories{
+   text-decoration: none;
+}
+
+.linkrrd{
+  text-decoration: none;
+  color: var(--text-intermediate);
+}
+
+.category{
+  margin: 0;
+  padding: 0.5em 0;
+  text-align: start;
+  font-weight: bold;
+  text-transform: uppercase;
+}

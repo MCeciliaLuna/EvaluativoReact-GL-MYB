@@ -1,0 +1,35 @@
+.container {
+  position: relative;
+  background: var(--background-cards);
+  height: 1vh;
+}
+
+.wave {
+  position: absolute;
+  height: 34px;
+  width: 100%;
+  background: var(--background-cards);
+  bottom: 0;
+}
+
+.wave::before, .wave::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+}
+
+.wave::before {
+  width: 55%;
+  height: 109%;
+  background-color: var(--background);
+  right: -1.5%;
+  top: 60%;
+}
+.wave::after {
+  width: 55%;
+  height: 100%;
+  background-color: var(--background-cards);
+  left: -1.5%;
+  top: 40%;
+}

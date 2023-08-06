@@ -16,6 +16,11 @@
   text-align: center;
 }
 
+.emoji{
+  font-size: 2rem;
+  margin: 0;
+}
+
 .argument{
   font-size: 1.08rem;
 }

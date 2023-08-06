@@ -1,0 +1,35 @@
+.containertwo {
+  position: relative;
+  background: var(--background);
+  height: 3vh;
+}
+
+.wavetwo {
+  position: absolute;
+  height: 34px;
+  width: 100%;
+  background: var(--background);
+  bottom: 0;
+}
+
+.wavetwo::before, .wavetwo::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+}
+
+.wavetwo::before {
+  width: 55%;
+  height: 109%;
+  background-color: var(--text-light);
+  right: -1.5%;
+  top: 60%;
+}
+.wavetwo::after {
+  width: 55%;
+  height: 100%;
+  background-color: var(--background);
+  left: -1.5%;
+  top: 40%;
+}
