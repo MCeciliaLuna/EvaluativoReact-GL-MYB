@@ -16,20 +16,20 @@
   content: "";
   display: block;
   position: absolute;
-  border-radius: 100% 50%;
+  border-radius: 100% 60%;
 }
 
 .wave::before {
-  width: 55%;
-  height: 109%;
+  width: 57%;
+  height: 100%;
   background-color: var(--background);
-  right: -1.5%;
+  right: 0%;
   top: 60%;
 }
 .wave::after {
-  width: 55%;
+  width: 50%;
   height: 100%;
   background-color: var(--background-cards);
   left: -1.5%;
-  top: 40%;
+  top: 34%;
 }

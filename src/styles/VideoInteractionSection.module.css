@@ -1,0 +1,115 @@
+.section{
+  background-color: var(--background-cards);
+  margin: 0;
+}
+
+.formcomment{
+  background-color: var(--background-cards);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.questionuser{
+  margin:0;
+  padding: 3em 1em 1em;
+  color: var(--text-light);
+  font-size: 1.5rem;
+}
+
+.inputcomment{
+  background-color: var(--text-light);
+  width: 90vw;
+  height: 20vh;
+  border-radius: 10px;
+  padding: 1em;
+  font-size: 1.4em;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+  font-family: 'Text';
+}
+
+.button {
+  margin: 1em;
+  padding:0.5em;
+  background-color: var(--background);
+  color: var(--text-light);
+  font-family: 'Text';
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+}
+
+.button:hover {
+  background-color: var(--background);
+}
+
+.commentssection{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.myCustomCard.MuiCard-root {
+  box-shadow: none;
+}
+
+.card{
+  width: 80vw;
+  margin: 1em;
+  }
+
+.commentdata{
+  background-color: var(--text-light);
+}
+
+.commenttext{
+  word-wrap: break-word;
+}
+
+.reactions{
+  display: flex;
+  justify-content: end;
+  background-color: var(--text-intermediate);
+  font-size: 5rem;
+}
+
+.container {
+  position: relative;
+  background: var(--text-light);
+  height: 2vh;
+}
+
+.wave {
+  position: absolute;
+  height: 34px;
+  width: 100%;
+  background: var(--text-light);
+  bottom: 0;
+}
+
+.wave::before, .wave::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+}
+
+.wave::before {
+  width: 55%;
+  height: 109%;
+  background-color: var(--text-intermediate);
+  right: -1.5%;
+  top: 60%;
+}
+.wave::after {
+  width: 55%;
+  height: 100%;
+  background-color: var(--text-light);
+  left: -1.5%;
+  top: 40%;
+}

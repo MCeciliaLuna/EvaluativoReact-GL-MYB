@@ -19,8 +19,8 @@ const AdminPage = ({ videoData }) => {
       <Navbar />
       <UserWelcome />
       <UserWelcomeVideos videoData={videoData} />
-      <section className={styles.containertwo}>
-  <div className={styles.wavetwo}></div>
+      <section className={styles.container}>
+  <div className={styles.wave}></div>
 </section>
       <UserTopicCategories videoData={videoData} />
       <Footer />

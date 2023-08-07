@@ -6,7 +6,7 @@ export const videos = [
       "¿POR QUÉ EL DÓLAR ESTÁ EN PELIGRO? - Las claves de la caída del dólar estadounidense",
     description:
       "¿El mundo se está reacomodando? Todo lo que conocíamos en materia económica hasta este momento está en jaque gracias a la gran crisis que enfrenta EEUU con la creciente desdolarización del mundo",
-    category: "Economía",
+    category: "Economia",
   },
   {
     urlVideo: "https://www.youtube.com/watch?v=iKn5hcp0ryI",
@@ -14,7 +14,7 @@ export const videos = [
     title: "¡QUE SE VAYAN TODOS! | La trampa de la democracia representativa",
     description:
       "Hoy me tomé el permitido de hacer una reflexión personal sobre el electoralismo y la coyuntura política regional, aunque tengo seguridad que todes podrán trasladar estas palabras a su situación particular.",
-    category: "Política",
+    category: "Politica",
   },
   {
     urlVideo: "https://www.youtube.com/watch?v=0I0XbahtfTE",
@@ -40,7 +40,7 @@ export const videos = [
       "¿TIK TOK ARRUINÓ LOS CONCIERTOS? - Una opinión sobre los efectos de la plataforma en el labor de los artistas",
     description:
       "Tal vez ahora los conciertos deben apuntar al individualismo. Tal vez debe haber menor espacio de improvisación y mayor protagonismo de fans. Que surjan más híbridos como el de Rosalía en donde el formato (por más artificial) no ahoga su carisma y performance para mantener la cercanía. Pensemos un poco sobre el tema",
-    category: "Música",
+    category: "Musica",
   },
   {
     urlVideo: "https://www.youtube.com/watch?v=VrtSJDFMwuA",
