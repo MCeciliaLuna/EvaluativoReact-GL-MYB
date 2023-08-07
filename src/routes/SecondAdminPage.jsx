@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import SelectedVideo from "../components/SelectedVideo";
 import VideoInteractionSection from "../components/VideoInteractionSection";
 import loginStore from "../store/loginStore";
+import styles from '../styles/SecondAdminPage.module.css'
 
 const SecondAdminPage = ({ videoData }) => {
   const login = loginStore((state) => state.login);
@@ -20,6 +21,9 @@ const SecondAdminPage = ({ videoData }) => {
     <>
       <Navbar />
       <SelectedVideo selectedVideo={selectedVideo} />
+      <section className={styles.container}>
+  <div className={styles.wave}></div>
+</section>
       <VideoInteractionSection />
       <Footer />
     </>

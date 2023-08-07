@@ -1,14 +1,14 @@
 .container {
   position: relative;
-  background: var(--background);
-  height: 3vh;
+  background: var(--text-light);
+  height: 1vh;
 }
 
 .wave {
   position: absolute;
   height: 34px;
   width: 100%;
-  background: var(--background);
+  background: var(--text-light);
   bottom: 0;
 }
 
@@ -22,14 +22,14 @@
 .wave::before {
   width: 57%;
   height: 100%;
-  background-color: var(--text-light);
+  background-color: var(--background-cards);
   right: 0%;
   top: 60%;
 }
 .wave::after {
   width: 50%;
   height: 100%;
-  background-color: var(--background);
+  background-color: var(--text-light);
   left: -1.5%;
   top: 34%;
 }
