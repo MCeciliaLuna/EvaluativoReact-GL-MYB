@@ -1,7 +1,113 @@
-.fondo{
-    background-color: aquamarine;
+.section{
+text-align: center;
+}
+.container {
+    height: 80vh;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    flex-wrap: nowrap;
+    align-self: stretch;
+    box-sizing: border-box;
 }
 
-.h1{
-    background-color: blueviolet;
+.form {
+    width: 100%;
+    margin: 0.25em;
+    display: flex;
 }
+
+.input {
+    padding: 0.5rem;
+    width: 100%;
+    border: #034078 thin solid;
+}
+
+.containerChat {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    overflow: auto;
+}
+
+.ul {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+
+.userMessage {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: normal;
+    font-size: 19px;
+    margin: 0;
+    padding: 0.25em;
+    color: #FEFCFB;
+}
+
+.color1 {
+    max-width: 80%;
+    min-width: 15%;
+    align-self: flex-end;
+    justify-self: flex-end;
+    margin-bottom: 0.2em;
+    text-align: start;
+}
+
+.color2 {
+    color: #FEFCFB;
+    max-width: 80%;
+    min-width: 15%;
+    align-self: flex-start;
+    justify-self: flex-start;
+    margin-bottom: 0.2em;
+    text-align: start;
+}
+
+.chat1 {
+    background-color: #1282A2;
+    border-radius: 0.5rem;
+    padding: 0.1em;
+}
+
+.chat2 {
+
+    background-color: #034078;
+    padding: 0.1em;
+    border-radius: 0.5rem;
+}
+
+.user2 {
+    color: #FEFCFB;
+    font-size: 20px;
+    margin: 0;
+    padding: 0.25em;
+    text-decoration-line: underline;
+}
+
+.user1 {
+    display: none;
+    padding: 0.5;
+}
+
+.button {
+    border: 0;
+    background-color: #03407800;
+}
+
+.buttonIcon {
+    color: #034078;
+    font-size: 25px;
+    border: 0;
+}
+
+
