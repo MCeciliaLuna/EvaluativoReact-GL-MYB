@@ -1,37 +1,62 @@
-.section{
+.section {
+  margin-top: 3.5em;
   background-image: url(../assets/images/background-admin.webp);
   background-size: cover;
-    background-repeat: no-repeat;
-    color: var(--text-light);
-  text-shadow: 4px 4px 10px rgba(0,0,0,1);
+  background-repeat: no-repeat;
+  color: var(--text-light);
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 1);
   text-align: end;
-  height: 35vh;
+  height: 50vh;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-.cover{
-  background-color: rgba(255, 255, 255, 0.1);
-  width: 100vw;
-  height: 35vh;
-  position: absolute;
-  z-index: 0;
-}
-
-.containertext{
+.containertext {
   padding: 1em;
 }
 
-.welcometext{
- font-size: 2rem;
- margin: 0.5em;
+.welcometext {
+  font-size: 1.7rem;
+  margin: 0.5em;
 }
 
-.username{
+.username {
   text-transform: uppercase;
 }
 
-.welcomesecondtext{
+.welcomesecondtext {
   font-size: 1.2rem;
   margin: 0.2em;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .section {
+    height: 50vh;
+  }
+
+  .welcometext {
+    font-size: 2.5rem;
+  }
+
+  .welcomesecondtext {
+    font-size: 1.5rem;
+    margin-right: 1em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    height: 70vh;
+    background-position: center;
+  }
+
+  .welcometext {
+    font-size: 2.3rem;
+  }
+
+  .welcomesecondtext {
+    font-size: 1.5rem;
+    margin-right: 1em;
+  }
 }
