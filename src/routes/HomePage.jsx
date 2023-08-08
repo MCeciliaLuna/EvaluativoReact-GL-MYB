@@ -1,13 +1,13 @@
-import UserWelcome from "../components/UserWelcome";
+import HomeWelcome from "../components/HomeWelcome";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import UserWelcomeVideos from "../components/UserWelcomeVideos";
-import UserTopicCategories from "../components/UserTopicCategories";
+import HomeVideos from "../components/HomeVideos";
+import HomeCategories from "../components/HomeCategories";
 import loginStore from "../store/loginStore";
 import { Navigate } from "react-router-dom";
-import styles from '../styles/UserPage.module.css'
+import styles from '../styles/HomePage.module.css'
 
-const UserPage = ({ videoData }) => {
+const HomePage = ({ videoData }) => {
   const login = loginStore((state) => state.login);
 
   if (!login) {
@@ -17,15 +17,15 @@ const UserPage = ({ videoData }) => {
   return (
     <>
       <Navbar />
-      <UserWelcome />
-      <UserWelcomeVideos videoData={videoData} />
+      <HomeWelcome />
+      <HomeVideos videoData={videoData} />
       <section className={styles.container}>
   <div className={styles.wave}></div>
 </section>
-      <UserTopicCategories videoData={videoData} />
+      <HomeCategories videoData={videoData} />
       <Footer />
     </>
   );
 };
 
-export default UserPage;
+export default HomePage;

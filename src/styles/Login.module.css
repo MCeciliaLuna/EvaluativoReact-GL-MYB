@@ -83,12 +83,13 @@
   }
 
   .form {
-    width: 45vw;
+    width: 20vw;
   }
 
   .button {
     margin: 0 auto;
     margin-top: 1.5em;
+    margin-bottom: 2.5em;
     padding: 0.8em;
     width: 15vw;
   }

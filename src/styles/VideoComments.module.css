@@ -1,0 +1,189 @@
+.section {
+  background-color: var(--background-cards);
+  margin: 0;
+}
+
+.formcomment {
+  background-color: var(--background-cards);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.questionuser {
+  margin: 0;
+  padding: 3em 1em 1em;
+  color: var(--text-light);
+  font-size: 1.5rem;
+}
+
+.inputcomment {
+  background-color: var(--text-light);
+  width: 90vw;
+  height: 20vh;
+  border-radius: 10px;
+  padding: 1em;
+  font-size: 1.2em;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  font-family: "Text";
+}
+
+.commentbottomcontainer {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 1em 0 2em 0;
+}
+
+.countcharacters {
+  color: var(--text-light);
+  margin: 0;
+}
+
+.button {
+  padding: 0.5em;
+  background-color: var(--background);
+  color: var(--text-light);
+  font-family: "Text";
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.button:hover {
+  background-color: var(--background);
+}
+
+.commentssection {
+  margin-top: 3em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 80vw;
+  margin: 1em;
+}
+
+.commentdata {
+  background-color: var(--text-light);
+}
+
+.commenttext {
+  word-wrap: break-word;
+}
+
+.reactions {
+  display: flex;
+  justify-content: end;
+  background-color: var(--text-intermediate);
+  color: var(--text-light);
+}
+
+.container {
+  position: relative;
+  background: var(--text-light);
+  height: 2vh;
+}
+
+.wave {
+  position: absolute;
+  height: 34px;
+  width: 100%;
+  background: var(--text-light);
+  bottom: 0;
+}
+
+.wave::before,
+.wave::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 60%;
+}
+
+.wave::before {
+  width: 57%;
+  height: 100%;
+  background-color: var(--text-intermediate);
+  right: 0%;
+  top: 60%;
+}
+.wave::after {
+  width: 50%;
+  height: 100%;
+  background-color: var(--text-light);
+  left: -1.5%;
+  top: 34%;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .inputcomment {
+    font-size: 1.5rem;
+  }
+
+  .commentssection {
+    justify-content: space-evenly;
+  }
+
+  .card {
+    width: 45vw;
+  }
+
+  .commenttext {
+    height: 240px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .formcomment {
+    margin-bottom: 3em;
+  }
+  .questionuser {
+    width: 90vw;
+    text-align: center;
+    padding-bottom: 1.5em;
+  }
+
+  .inputcomment {
+    width: 50vw;
+    height: 35vh;
+  }
+
+  .commentbottomcontainer {
+    width: 15vw;
+    flex-direction: column-reverse;
+    margin: 0 1em;
+  }
+
+  .countcharacters {
+    margin-top: 1em;
+  }
+
+  .button {
+    padding: 0.7em;
+  }
+
+  .commentssection {
+    justify-content: space-evenly;
+  }
+
+  .card {
+    width: 30vw;
+  }
+
+  .commenttext {
+    height: 280px;
+    display: flex;
+    align-items: center;
+  }
+}
