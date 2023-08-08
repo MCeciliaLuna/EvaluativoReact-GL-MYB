@@ -28,3 +28,18 @@
   font-weight: bold;
   text-transform: uppercase;
 }
+
+@media (min-width: 768px) and (max-width: 1023px){
+  .category{
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 1024px){
+  .section{
+    height: 40vh;
+  }
+  .category{
+    font-size: 1.1rem;
+  }
+}

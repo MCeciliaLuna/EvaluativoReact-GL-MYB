@@ -3,24 +3,46 @@
   justify-content: space-between;
   align-items: center;
   background-color: var(--background);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
-.logo{
+.logo {
   text-decoration: none;
-  font-family: 'Titles';
+  font-family: "Titles";
   color: var(--text-light);
   font-size: 1.5rem;
   margin: 0.5em;
 }
 
-.linkscontainer{
+.linkscontainer {
   margin: 0.5em;
   display: flex;
   width: 30vw;
   justify-content: space-around;
 }
 
-.navlink{
+.navlink {
   text-decoration: none;
   color: var(--text-light);
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .logo {
+    font-size: 1.8rem;
+    margin-left: 1em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .logo {
+    margin-left: 2em;
+  }
+
+  .linkscontainer {
+    width: 20vw;
+    justify-content: space-around;
+  }
 }

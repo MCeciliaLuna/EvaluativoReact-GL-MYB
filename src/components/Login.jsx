@@ -33,7 +33,7 @@ const Login = () => {
   };
 
   if (login === true) {
-    navigate("/adminpage");
+    navigate("/home");
   }
 
   return (

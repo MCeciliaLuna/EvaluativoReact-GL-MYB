@@ -5,9 +5,9 @@ import UserWelcomeVideos from "../components/UserWelcomeVideos";
 import UserTopicCategories from "../components/UserTopicCategories";
 import loginStore from "../store/loginStore";
 import { Navigate } from "react-router-dom";
-import styles from '../styles/AdminPage.module.css'
+import styles from '../styles/UserPage.module.css'
 
-const AdminPage = ({ videoData }) => {
+const UserPage = ({ videoData }) => {
   const login = loginStore((state) => state.login);
 
   if (!login) {
@@ -28,4 +28,4 @@ const AdminPage = ({ videoData }) => {
   );
 };
 
-export default AdminPage;
+export default UserPage;

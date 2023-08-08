@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import MainPage from "./routes/MainPage";
-import AdminPage from "./routes/AdminPage";
+import UserPage from "./routes/UserPage";
 import SecondAdminPage from "./routes/SecondAdminPage";
 import ErrorPage from "./error-page";
 import ChatRoom from "./routes/ChatRoom";
@@ -17,8 +17,8 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: "/adminpage",
-    element: <AdminPage videoData={videos} />,
+    path: "/home",
+    element: <UserPage videoData={videos} />,
   },
   {
     path: "/secondadminpage",
