@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
-import Login from "./routes/Login";
+import MainPage from "./routes/MainPage";
 import AdminPage from "./routes/AdminPage";
 import SecondAdminPage from "./routes/SecondAdminPage";
 import ErrorPage from "./error-page";
@@ -13,7 +13,7 @@ import { videos } from "../src/api/videosArray";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Login />,
+    element: <MainPage />,
     errorElement: <ErrorPage />,
   },
   {
