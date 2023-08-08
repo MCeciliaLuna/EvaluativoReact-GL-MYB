@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import styles from "../styles/UserWelcomeVideos.module.css";
+import styles from "../styles/HomeVideos.module.css";
 
-const UserWelcomeVideos = ({ videoData }) => {
+const HomeVideos = ({ videoData }) => {
   const randomVideos = videoData.toSorted(() => 0.5 - Math.random());
   const twoRandomVideos = randomVideos.slice(0, 2);
 
@@ -13,7 +13,7 @@ const UserWelcomeVideos = ({ videoData }) => {
       {twoRandomVideos.map((video, index) => (
         <div key={index}>
           <h5 className={styles.categoryvideo}>{video.category}</h5>
-          <Link to={`/secondadminpage/${video.category}`}>
+          <Link to={`/selectedcategory/${video.category}`}>
             <img
               src={video.image}
               alt="image-video"
@@ -26,4 +26,4 @@ const UserWelcomeVideos = ({ videoData }) => {
   );
 };
 
-export default UserWelcomeVideos;
+export default HomeVideos;

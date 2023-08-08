@@ -1,4 +1,4 @@
-import styles from "../styles/UserWelcome.module.css";
+import styles from "../styles/HomeWelcome.module.css";
 
 const UserWelcome = () => {
   const userName = sessionStorage.getItem("userName");

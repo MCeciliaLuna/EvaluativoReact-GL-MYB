@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
-import styles from '../styles/UserTopicCategories.module.css'
+import styles from '../styles/HomeCategories.module.css'
 
-const UserTopicCategories = ({ videoData }) => {
+const HomeCategories = ({ videoData }) => {
   return (
     <section className={styles.section}>
       <h2 className={styles.title}>Buscá por temática:</h2>
       <div className={styles.categories}>
       {videoData.map((video, index) => (
         <div key={index}>
-          <Link className={styles.linkrrd} to={`/secondadminpage/${video.category}`}>
+          <Link className={styles.linkrrd} to={`/selectedcategory/${video.category}`}>
             <p className={styles.category}>{video.category}</p>
           </Link>
         </div>
@@ -18,4 +18,4 @@ const UserTopicCategories = ({ videoData }) => {
   );
 };
 
-export default UserTopicCategories;
+export default HomeCategories;

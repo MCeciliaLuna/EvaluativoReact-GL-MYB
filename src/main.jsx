@@ -3,8 +3,8 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import MainPage from "./routes/MainPage";
-import UserPage from "./routes/UserPage";
-import SecondAdminPage from "./routes/SecondAdminPage";
+import HomePage from "./routes/HomePage";
+import SelectedCategoryPage from "./routes/SelectedCategoryPage";
 import ErrorPage from "./error-page";
 import ChatRoom from "./routes/ChatRoom";
 import { videos } from "../src/api/videosArray";
@@ -18,11 +18,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/home",
-    element: <UserPage videoData={videos} />,
+    element: <HomePage videoData={videos} />,
   },
   {
-    path: "/secondadminpage",
-    element: <SecondAdminPage videoData={videos} />,
+    path: "/selectedcategory",
+    element: <SelectedCategoryPage videoData={videos} />,
     children: [
       {
         path: ":category",
