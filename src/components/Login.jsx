@@ -2,10 +2,10 @@ import { useRef } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import loginStore from "../store/loginStore";
-import styles from "../styles/LoginForm.module.css";
+import styles from "../styles/Login.module.css";
 import { TextField } from "@mui/material";
 
-const LoginForm = () => {
+const Login = () => {
   const login = loginStore((state) => state.login);
   const setLogin = loginStore((state) => state.setLogin);
   const usernameRef = useRef(null);
@@ -27,7 +27,7 @@ const LoginForm = () => {
       } else {
         toast.error("Ingresá correctamente los datos");
       }
-    }else {
+    } else {
       toast.error("Ingresá los datos solicitados");
     }
   };
@@ -48,7 +48,7 @@ const LoginForm = () => {
           variant="standard"
           label="Nombre de usuario"
           inputRef={usernameRef}
-          inputProps={{maxLength:"15"}}
+          inputProps={{ maxLength: "15" }}
         />
         <br />
         <TextField
@@ -57,7 +57,7 @@ const LoginForm = () => {
           variant="standard"
           label="Email"
           inputRef={emailRef}
-          inputProps={{maxLength:"30"}}
+          inputProps={{ maxLength: "30" }}
         />
         <button
           className={styles.button}
@@ -71,4 +71,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default Login;

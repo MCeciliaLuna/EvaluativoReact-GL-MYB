@@ -1,0 +1,95 @@
+.section {
+  align-items: center;
+  background-image: url(../assets/images/background.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--text-intermediate);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  padding: 20px;
+  z-index: 1;
+}
+
+.cover {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 80vw;
+  height: 60vh;
+  position: absolute;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.title {
+  font-family: "Titles";
+  font-size: 2rem;
+  margin: 1em 0;
+  z-index: 1;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  z-index: 1;
+}
+
+.button {
+  margin: 1.5em auto;
+  padding: 1em;
+  background-color: var(--text-intermediate);
+  color: var(--text-light);
+  font-family: "Text";
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  width: 50vw;
+}
+
+.button:hover {
+  background-color: var(--background);
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .title {
+    font-size: 2.7rem;
+  }
+
+  .form {
+    width: 60vw;
+    font-size: 3rem;
+  }
+
+  .button {
+    width: 30vw;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cover {
+    width: 60vw;
+    height: 60vh;
+  }
+
+  .title {
+    font-size: 2.3rem;
+  }
+
+  .form {
+    width: 45vw;
+  }
+
+  .button {
+    margin: 0 auto;
+    margin-top: 1.5em;
+    padding: 0.8em;
+    width: 15vw;
+  }
+}
