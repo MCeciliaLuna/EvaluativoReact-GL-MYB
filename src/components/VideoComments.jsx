@@ -23,7 +23,7 @@ const VideoComments = () => {
 
   const getComments = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/getcomments");
+      const response = await axios.get("https://welearnwebapi.onrender.com/getcomments");
       const data = response.data;
       data.reverse();
       setComments(data);
@@ -53,7 +53,7 @@ const VideoComments = () => {
       };
       try {
         const response = await axios.post(
-          "http://localhost:8000/createComments",
+          "https://welearnwebapi.onrender.com/createComments",
           comment
         );
         const data = response.data;
