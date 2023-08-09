@@ -5,7 +5,7 @@
   background-color: var(--background);
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 100vw;
   box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.5);
   z-index: 1;
 }

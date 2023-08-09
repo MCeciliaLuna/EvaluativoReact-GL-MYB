@@ -1,0 +1,20 @@
+.section{
+  margin-top: 4em;
+  padding: 2em 0 2.5em;
+  color: var(--text-light);
+  background-image: url(../assets/images/background-chat.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 1);
+  text-align: center;
+}
+
+.title{
+  font-size: 2em;
+  margin: 0;
+}
+
+.subtitles{
+  margin:0
+}
