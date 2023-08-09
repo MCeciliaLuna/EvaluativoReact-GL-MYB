@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import loginStore from "../store/loginStore";
@@ -32,9 +32,12 @@ const Login = () => {
     }
   };
 
-  if (login === true) {
-    navigate("/home");
-  }
+    useEffect(() => {
+      if (login === true) {
+        navigate("/home");
+      }
+      }, [login])
+  
 
   return (
     <section id="login-form" className={styles.section}>
