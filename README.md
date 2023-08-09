@@ -36,14 +36,19 @@ Este proyecto es una aplicación web desarrollada en React que muestra una pági
 
 ## 🎞 Capturas de Pantalla 🎞
 
-![enter image description here](https://i.ibb.co/Pgh5hvX/1-login.png)
-![enter image description here](https://i.ibb.co/mBXjqbW/2-Formulario.png)
-![enter image description here](https://i.ibb.co/SrWMtt2/3-bienvenida.png)
-![https://i.ibb.co/23RP1mk/4-Chat.png](https://i.ibb.co/23RP1mk/4-Chat.png)
-![enter image description here](https://i.ibb.co/F86WTN9/5-caja-de-comentarios.png)
-![enter image description here](https://i.ibb.co/dBXK1W4/6-Comentarios.png)
+![Vista de la página principal](https://i.ibb.co/tYQmz7J/1-loguin.png)
   
+  ![Formulario de Login](https://i.ibb.co/f9mpCKf/2-formulario.png)
  
+ ![Página de Bienvenida](https://i.ibb.co/cN1jyYc/3-bienvenida.png)
+ 
+![Filtro de Búsqueda](https://i.ibb.co/RhfJYvN/4-filtro-de-busqueda.png)
+
+![Sala de Chat](https://i.ibb.co/tcH8JXc/5-sala-de-chat.png)
+
+![Caja de comentarios](https://i.ibb.co/2vGXSrv/6-caja-de-comentarios.png)
+
+
 
 ## 💻 Instalación 💻
 
@@ -92,4 +97,3 @@ Este proyecto es una aplicación web desarrollada en React que muestra una pági
 - Andrea Menendez - [Perfil de GitHub](https://github.com/andimenendez)
 
 - Ezequiel Cabello - [Perfil de GitHub](https://github.com/Kibbax)  
-
