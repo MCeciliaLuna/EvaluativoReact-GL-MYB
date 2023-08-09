@@ -7,10 +7,13 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import CopyToClipboard from "react-copy-to-clipboard";
+import Swal from "sweetalert2";
 
 const VideoComments = () => {
   const [comments, setComments] = useState([]);
   const [characters, setCharacters] = useState("");
+  const [copied, setCopied] = useState(false);
   const commentUser = useRef(null);
   const minLength = 100;
   const maxLength = 500;
@@ -20,9 +23,7 @@ const VideoComments = () => {
 
   const getComments = async () => {
     try {
-      const response = await axios.get(
-        "https://welearnwebapi.onrender.com/getcomments"
-      );
+      const response = await axios.get("http://localhost:8000/getcomments");
       const data = response.data;
       data.reverse();
       setComments(data);
@@ -52,7 +53,7 @@ const VideoComments = () => {
       };
       try {
         const response = await axios.post(
-          "https://welearnwebapi.onrender.com/createComments",
+          "http://localhost:8000/createComments",
           comment
         );
         const data = response.data;
@@ -61,9 +62,23 @@ const VideoComments = () => {
       } catch (error) {
         console.error(error);
       }
+      toast("¡Comentario publicado exitosamente! ✅", {
+        duration: 6000,
+      });
     } else {
       toast.error("Ingresá un comentario +- extenso");
     }
+  };
+  const copiedEmail = (event) => {
+    Swal.fire({
+      title: "Copiaste su mail al portatapeles",
+      text: "¡Puedes contactar a este usuario personalmente para compartir más conocimientos! 🚀",
+      confirmButtonColor: "var(--background)",
+      confirmButtonText: "Entendido",
+    });
+
+    setCopied(true);
+    event.preventDefault();
   };
 
   return (
@@ -96,13 +111,6 @@ const VideoComments = () => {
         {comments?.map((comment, index) => (
           <Card className={styles.card} key={index}>
             <CardContent className={styles.commentdata}>
-              <Typography
-                sx={{ fontSize: 14 }}
-                color="text.secondary"
-                gutterBottom
-              >
-                {comment.email}
-              </Typography>
               <Typography sx={{ fontSize: 20 }} variant="h5" component="div">
                 {comment.userName} dice:
               </Typography>
@@ -113,9 +121,15 @@ const VideoComments = () => {
             <section className={styles.container}>
               <div className={styles.wave}></div>
             </section>
-            <CardActions className={styles.reactions}>
-              <Button sx={{ fontSize: 20 }}>🤩 1</Button>
-              <Button sx={{ fontSize: 20 }}>😡 3</Button>
+            <CardActions className={styles.emailcontact}>
+              <CopyToClipboard text={comment.email}>
+                <Button
+                  sx={{ fontSize: 15, fontWeight: "bold" }}
+                  onClick={() => copiedEmail()}
+                >
+                  {comment.email} 💬
+                </Button>
+              </CopyToClipboard>
             </CardActions>
           </Card>
         ))}

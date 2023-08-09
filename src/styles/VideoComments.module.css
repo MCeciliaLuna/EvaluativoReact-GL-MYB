@@ -80,11 +80,15 @@
   word-wrap: break-word;
 }
 
-.reactions {
+.emailcontact {
   display: flex;
   justify-content: end;
   background-color: var(--text-intermediate);
   color: var(--text-light);
+}
+
+.emaildirect {
+  text-decoration: none;
 }
 
 .container {
