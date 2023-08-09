@@ -22,10 +22,10 @@ const router = createBrowserRouter([
   },
   {
     path: "/selectedcategory",
-    element: <SelectedCategoryPage videoData={videos} />,
     children: [
       {
         path: ":category",
+        element: <SelectedCategoryPage videoData={videos} />
       },
     ],
   },
