@@ -13,28 +13,27 @@ import Swal from "sweetalert2";
 const VideoComments = () => {
   const [comments, setComments] = useState([]);
   const [characters, setCharacters] = useState("");
-  const [copied, setCopied] = useState(false);
+  const [loadingComments, setLoadingComments] = useState(true);
+  const [setCopied] = useState(false);
   const commentUser = useRef(null);
-  const minLength = 100;
-  const maxLength = 500;
-
   const userName = sessionStorage.getItem("userName");
   const userEmail = sessionStorage.getItem("userEmail");
+  const minLength = 150;
+  const maxLength = 600;
 
   const getComments = async () => {
     try {
-      const response = await axios.get("https://welearnwebapi.onrender.com/getcomments");
+      const response = await axios.get(
+        "https://welearnwebapi.onrender.com/getcomments"
+      );
       const data = response.data;
       data.reverse();
       setComments(data);
+      setLoadingComments(false);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
   };
-
-  useEffect(() => {
-    getComments();
-  }, []);
 
   const countCharacters = () => {
     const commentCharacters = commentUser.current.value;
@@ -62,13 +61,14 @@ const VideoComments = () => {
       } catch (error) {
         console.error(error);
       }
-      toast("¡Comentario publicado exitosamente! ✅", {
+      toast("¡Tu comentario fue publicado! ✅", {
         duration: 6000,
       });
     } else {
-      toast.error("Ingresá un comentario +- extenso");
+      toast.error("Ingresá un comentario más extenso");
     }
   };
+
   const copiedEmail = (event) => {
     Swal.fire({
       title: "Copiaste su mail al portatapeles",
@@ -81,24 +81,28 @@ const VideoComments = () => {
     event.preventDefault();
   };
 
+  useEffect(() => {
+    getComments();
+  }, []);
+
   return (
     <section className={styles.section}>
       <Toaster />
-      <form className={styles.formcomment}>
-        <p className={styles.questionuser}>
+      <form className={styles.formComment}>
+        <p className={styles.questionUser}>
           ¿Qué pensás acerca de esto, <b>{userName}</b>?
         </p>
         <textarea
           required
-          className={styles.inputcomment}
+          className={styles.inputComment}
           id="input-comment"
           ref={commentUser}
           minLength={minLength}
           maxLength={maxLength}
           onChange={() => countCharacters()}
         />
-        <div className={styles.commentbottomcontainer}>
-          <p className={styles.countcharacters}>
+        <div className={styles.commentButtonContainer}>
+          <p className={styles.countCharacters}>
             {maxLength - characters.length}/{maxLength}
           </p>
           <button className={styles.button} onClick={commentData}>
@@ -107,32 +111,38 @@ const VideoComments = () => {
         </div>
       </form>
       <hr />
-      <section className={styles.commentssection}>
-        {comments?.map((comment, index) => (
-          <Card className={styles.card} key={index}>
-            <CardContent className={styles.commentdata}>
-              <Typography sx={{ fontSize: 20 }} variant="h5" component="div">
-                {comment.userName} dice:
-              </Typography>
-              <Typography className={styles.commenttext} variant="body2">
-                {comment.comment}
-              </Typography>
-            </CardContent>
-            <section className={styles.container}>
-              <div className={styles.wave}></div>
-            </section>
-            <CardActions className={styles.emailcontact}>
-              <CopyToClipboard text={comment.email}>
-                <Button
-                  sx={{ fontSize: 15, fontWeight: "bold" }}
-                  onClick={() => copiedEmail()}
-                >
-                  {comment.email} 💬
-                </Button>
-              </CopyToClipboard>
-            </CardActions>
-          </Card>
-        ))}
+      <section className={styles.commentSection}>
+        {loadingComments ? (
+          <span className={styles.loaderContainer}>
+            <p className={styles.loader}>Cargando comentarios...</p>
+          </span>
+        ) : (
+          comments?.map((comment, index) => (
+            <Card className={styles.card} key={index}>
+              <CardContent className={styles.commentsData}>
+                <Typography sx={{ fontSize: 20 }} variant="h5" component="div">
+                  {comment.userName} dice:
+                </Typography>
+                <Typography className={styles.commentText} variant="body2">
+                  {comment.comment}
+                </Typography>
+              </CardContent>
+              <section className={styles.container}>
+                <div className={styles.wave}></div>
+              </section>
+              <CardActions className={styles.emailContact}>
+                <CopyToClipboard text={comment.email}>
+                  <Button
+                    sx={{ fontSize: 13, fontWeight: "bold" }}
+                    onClick={() => copiedEmail()}
+                  >
+                    {comment.email} 💬
+                  </Button>
+                </CopyToClipboard>
+              </CardActions>
+            </Card>
+          ))
+        )}
       </section>
     </section>
   );

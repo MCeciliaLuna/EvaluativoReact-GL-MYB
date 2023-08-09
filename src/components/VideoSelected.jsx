@@ -9,11 +9,11 @@ const VideoSelected = ({ videoSelected }) => {
         alt="portada-video"
         className={styles.imagevideo}
       />
-      <div className={styles.textcontainer}>
+      <div className={styles.textContainer}>
         <h3 className={styles.category}>{videoSelected.category}</h3>
         <h2 className={styles.title}>{videoSelected.title}</h2>
         <p className={styles.description}>{videoSelected.description}</p>
-        <div className={styles.buttoncontainer}>
+        <div className={styles.buttonContainer}>
           <a href={videoSelected.urlVideo} target="_blank" rel="noreferrer">
             <Button variant="outlined">Ver video</Button>
           </a>

@@ -5,7 +5,7 @@ import HomeVideos from "../components/HomeVideos";
 import HomeCategories from "../components/HomeCategories";
 import loginStore from "../store/loginStore";
 import { Navigate } from "react-router-dom";
-import styles from '../styles/HomePage.module.css'
+import styles from "../styles/HomePage.module.css";
 
 const HomePage = ({ videoData }) => {
   const login = loginStore((state) => state.login);
@@ -20,8 +20,8 @@ const HomePage = ({ videoData }) => {
       <HomeWelcome />
       <HomeVideos videoData={videoData} />
       <section className={styles.container}>
-  <div className={styles.wave}></div>
-</section>
+        <div className={styles.wave}></div>
+      </section>
       <HomeCategories videoData={videoData} />
       <Footer />
     </>

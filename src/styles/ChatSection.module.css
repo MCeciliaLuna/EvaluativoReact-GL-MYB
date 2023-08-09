@@ -1,34 +1,38 @@
+.section {
+  text-align: center;
+}
 .container {
-  background-color: var(--text-light);
-  height: auto;
-    margin: 0 auto;
-  display: flex-end;
+  height: 65vh;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
   flex-direction: column;
-  }
+  align-items: center;
+  justify-content: end;
+  flex-wrap: nowrap;
+  align-self: stretch;
+  box-sizing: border-box;
+}
 
 .form {
-  background-color: var(--text-light);
-  width: 100vw;
-  margin: 1em 0 1em;
-    height: 6vh;
-    display: flex;
-  justify-content: center;
-  
-  }
+  width: 100%;
+  margin: 0.25em;
+  display: flex;
+  margin-bottom: 1rem;
+}
 
 .input {
-  width: 70vw;
-  border: var(--text-dark) thin solid;
-  border-radius: 7px;
-  padding: 0.5em;
+  padding: 1em;
+  width: 100%;
+  border: var(--text-intermediate) thin solid;
+  border-radius: 5px;
 }
 
 .containerChat {
-  width: 100vw;
-  display: flex-end;
-  flex-direction: column-reverse;
+  display: flex;
+  flex-direction: column;
   align-self: stretch;
-  padding: 0 2em;
+  overflow: auto;
 }
 
 .ul {
@@ -38,35 +42,43 @@
   align-items: flex-end;
   width: 100%;
   list-style: none;
-  margin: 0;
   padding: 0;
 }
 
 .userMessage {
+  overflow-wrap: break-word;
   word-wrap: break-word;
-  font-size: 19px;
+  word-break: break-all;
+  white-space: normal;
+  font-size: 1.3rem;
   margin: 0;
-  padding: 0.5em 0.5em 0.6em;
+  padding: 0.25em;
   color: var(--text-light);
 }
 
 .color1 {
   max-width: 80%;
   min-width: 15%;
-  margin: 0.2em 0;
+  align-self: flex-end;
+  justify-self: flex-end;
+  margin-bottom: 0.2em;
+  text-align: start;
 }
 
 .color2 {
+  color: var(--text-light);
   max-width: 80%;
   min-width: 15%;
   align-self: flex-start;
-  margin: 0.2em 0;
+  justify-self: flex-start;
+  margin-bottom: 0.2em;
+  text-align: start;
 }
 
 .chat1 {
-  background-color: var(--text-intermediate);
-  border-radius: 0.5rem;
-  padding: 0.1em;
+  background-color: var(--background-cards);
+  border-radius: 10px;
+  padding: 0.2em;
 }
 
 .chat2 {
@@ -75,25 +87,44 @@
   border-radius: 0.5rem;
 }
 
-.user1 {
-  display: none;
-}
-
 .user2 {
   color: var(--text-light);
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin: 0;
-  padding: 0.7em 0.5em 0 0.5em;
+  padding: 0.25em;
   text-decoration-line: underline;
+}
+
+.user1 {
+  display: none;
+  padding: 0.5;
 }
 
 .button {
   border: 0;
-  background-color: var(--text-light);
+  background-color: #03407800;
 }
 
 .buttonIcon {
-  color: var(--text-dark);
-  font-size: 1.9rem;
+  color: var(--background-cards);
+  font-size: 2rem;
   border: 0;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .form {
+    margin-bottom: 0.5rem;
+  }
+  .container {
+    height: 73vh;
+  }
+}
+
+@media (min-width: 1024px) {
+  .form {
+    margin-bottom: 1.5rem;
+  }
+  .container {
+    height: 73vh;
+  }
 }

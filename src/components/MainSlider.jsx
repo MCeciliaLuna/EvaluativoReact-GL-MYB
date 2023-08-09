@@ -20,7 +20,7 @@ const MainSlider = () => {
           <div key={index} className={styles.card}>
             <img src={video.image} alt="portada-video" />
 
-            <article className={styles.textvideos}>
+            <article className={styles.textVideos}>
               <h3>{video.title}</h3>
               <p className={styles.p}>{video.description}</p>
               <p>
@@ -35,12 +35,12 @@ const MainSlider = () => {
         infiniteLoop
         showStatus={false}
         showThumbs={false}
-        className={styles.secondcarousel}
+        className={styles.secondCarousel}
       >
         {firstThreeVideos.map((video, index) => (
-          <div key={index} className={styles.secondcard}>
+          <div key={index} className={styles.secondCard}>
             <img src={video.image} alt="portada-video" />
-            <article className={styles.secondtextvideos}>
+            <article className={styles.secondTextVideos}>
               <h3>{video.title}</h3>
               <p className={styles.secondp}>{video.description}</p>
               <p>

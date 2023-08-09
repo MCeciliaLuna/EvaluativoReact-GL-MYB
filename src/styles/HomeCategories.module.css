@@ -1,4 +1,4 @@
-.section{
+.section {
   margin: 1em;
   background-color: var(--text-light);
   height: 30vh;
@@ -7,21 +7,21 @@
   justify-content: space-evenly;
 }
 
-.title{
- color: var(--text-dark);
- font-size: 2rem;
+.title {
+  color: var(--text-dark);
+  font-size: 2rem;
 }
 
-.categories{
-   text-decoration: none;
+.categories {
+  text-decoration: none;
 }
 
-.linkrrd{
+.linkRrd {
   text-decoration: none;
   color: var(--text-intermediate);
 }
 
-.category{
+.category {
   margin: 0;
   padding: 0.5em 0;
   text-align: start;
@@ -29,17 +29,17 @@
   text-transform: uppercase;
 }
 
-@media (min-width: 768px) and (max-width: 1023px){
-  .category{
+@media (min-width: 768px) and (max-width: 1023px) {
+  .category {
     font-size: 1.3rem;
   }
 }
 
-@media (min-width: 1024px){
-  .section{
+@media (min-width: 1024px) {
+  .section {
     height: 40vh;
   }
-  .category{
+  .category {
     font-size: 1.1rem;
   }
 }

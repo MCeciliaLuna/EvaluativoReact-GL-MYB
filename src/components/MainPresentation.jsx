@@ -8,7 +8,7 @@ const MainPresentation = () => {
         <p className={styles.subtitle}>
           &quot;Pensamos juntos, luego existimos&quot;
         </p>
-        <div className={styles.buttoncontainer}>
+        <div className={styles.buttonContainer}>
           <a href="#login-form">
             <button className={styles.button}>Ingresá</button>
           </a>

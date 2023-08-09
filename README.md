@@ -1,10 +1,10 @@
 #   
 
-# Evaluativo React GL y MYB
+# Evaluativo React GL y MYB 🚀 - WELEARNWEB 💡
 
   
 
-Este es un proyecto evaluativo de React desarrollado por Ezequiel Cabello, Cecilia Luna y Andrea Menéndez.
+Este repositorio contiene nuestro proyecto evaluativo de  conocimientos en React.
 
   
 
@@ -12,7 +12,7 @@ Este es un proyecto evaluativo de React desarrollado por Ezequiel Cabello, Cecil
 
   
 
-Este proyecto es una aplicación web desarrollada en React que muestra una página de inicio con un slider de videos, un formulario de inicio de sesión y un footer. La página de inicio muestra los últimos tres videos en el slider. Los usuarios pueden iniciar sesión proporcionando su nombre de usuario y correo electrónico.
+WeLearn es una aplicación web que simula ser un espacio donde se comparten debates y charlas actuales, con las cuales los usuarios pueden interactuar de acuerdo a la temática elegida, comentar sus puntos de vista y contactarse directamente por una sala de chat.
 
   
 
@@ -20,25 +20,24 @@ Este proyecto es una aplicación web desarrollada en React que muestra una pági
 
   
 
-- Slider de videos en la página de inicio.
+- Slider de videos en la página de inicio (se muestran 2 en una PC de escritorio)
 
-- Formulario de inicio de sesión con validación básica.
+- Formulario de inicio de sesión con validación básica
 
-- Footer con enlaces a redes sociales y derechos de autor.
+- Footer con derechos de autor
 
-- Uso de Zustand para la gestión del estado de inicio de sesión.
+- Uso de Zustand para la gestión del estado de inicio de sesión
 
-- Uso de React Router para la navegación entre páginas.
+- Uso de React Router para la navegación entre páginas
 
-- Integración de Google Fonts para la tipografía.
+- Integración de Google Fonts para la tipografía
+
+- API de comentarios propia
+
+- Chat integrado
+
 
   
-
-## 🎞 Capturas de Pantalla 🎞
-
-
-
-
 
 ## 💻 Instalación 💻
 
@@ -48,7 +47,7 @@ Este proyecto es una aplicación web desarrollada en React que muestra una pági
 
 2. Ve al directorio del proyecto: `cd EvaluativoReact-GL-MYB`
 
-3. Instala las dependencias: `npm install`
+3. Instala las dependencias: ```npm install```
 
   
 
@@ -56,34 +55,44 @@ Este proyecto es una aplicación web desarrollada en React que muestra una pági
 
   
 
-1. Ejecuta la aplicación: `npm run dev`
+1. Ejecuta la aplicación: ```npm run dev```
 
 2. Abre tu navegador en: `http://localhost:5173`
 
   
 
-##  📦 Tecnologías Utilizadas 📦
+##  📦 Dependencias Utilizadas 📦
 
   
 
 - React
 
-- React Router
+- React-router-dom
 
 - Zustand
 
 - React Hot Toast
 
-- Google Fonts
+- Axios
 
+- Copy-to-clipboard
+
+- React-icons
+
+- React-boostrap
+
+- Socket.io
+
+- SweetAlert2
   
 
 ##  ✍ Autores ✍
 
-  
+¡Esperamos tu feedback! 🤩
+
 
 - Cecilia Luna - [Perfil de GitHub](https://github.com/MCeciliaLuna)
 
 - Andrea Menendez - [Perfil de GitHub](https://github.com/andimenendez)
 
-- Ezequiel Cabello - [Perfil de GitHub](https://github.com/Kibbax)  
+- Ezequiel Cabello - [Perfil de GitHub](https://github.com/Kibbax)

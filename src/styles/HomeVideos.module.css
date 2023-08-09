@@ -1,4 +1,4 @@
-.sectionvideos {
+.sectionVideos {
   background-color: var(--background);
   color: var(--text-light);
   display: flex;
@@ -16,12 +16,12 @@
   text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-.categoryvideo {
+.categoryVideo {
   margin: 1em 0;
   font-size: 1rem;
 }
 
-.imagevideo {
+.imageVideo {
   width: 80vw;
   margin-bottom: 1em;
   border-radius: 10px;
@@ -29,23 +29,23 @@
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  .sectionvideos {
+  .sectionVideos {
     justify-content: space-around;
   }
-  .imagevideo {
+  .imageVideo {
     width: 40vw;
   }
 }
 
 @media (min-width: 1024px) {
-  .sectionvideos {
+  .sectionVideos {
     justify-content: space-around;
   }
   .title {
     width: 90vw;
     font-size: 2.2rem;
   }
-  .imagevideo {
+  .imageVideo {
     width: 45vw;
   }
 }

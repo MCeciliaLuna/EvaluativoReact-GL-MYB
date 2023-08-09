@@ -1,4 +1,4 @@
-.section{
+.section {
   margin-top: 4em;
   padding: 2em 0 2.5em;
   color: var(--text-light);
@@ -10,11 +10,11 @@
   text-align: center;
 }
 
-.title{
+.title {
   font-size: 2em;
   margin: 0;
 }
 
-.subtitles{
-  margin:0
+.subtitles {
+  margin: 0;
 }

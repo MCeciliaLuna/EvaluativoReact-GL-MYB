@@ -32,12 +32,11 @@ const Login = () => {
     }
   };
 
-    useEffect(() => {
-      if (login === true) {
-        navigate("/home");
-      }
-      }, [login])
-  
+  useEffect(() => {
+    if (login === true) {
+      navigate("/home");
+    }
+  }, [login]);
 
   return (
     <section id="login-form" className={styles.section}>

@@ -18,14 +18,14 @@
   margin: 0.5em;
 }
 
-.linkscontainer {
+.linksContainer {
   margin: 0.5em;
   display: flex;
   width: 30vw;
   justify-content: space-around;
 }
 
-.navlink {
+.navLink {
   text-decoration: none;
   color: var(--text-light);
 }
@@ -42,7 +42,7 @@
     margin-left: 2em;
   }
 
-  .linkscontainer {
+  .linksContainer {
     width: 20vw;
     justify-content: space-around;
   }

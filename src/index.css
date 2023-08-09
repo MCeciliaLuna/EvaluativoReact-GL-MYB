@@ -1,27 +1,27 @@
 * {
   box-sizing: border-box;
-  }
+}
 
-:root{
-  --background: #1282A2;
-  --background-cards:  #034078;
-  --text-light: #FEFCFB;
-  --text-dark: #0A1128;
-  --text-intermediate: #001F54;
+:root {
+  --background: #1282a2;
+  --background-cards: #034078;
+  --text-light: #fefcfb;
+  --text-dark: #0a1128;
+  --text-intermediate: #001f54;
 }
 
 @font-face {
-  font-family: 'Titles';
+  font-family: "Titles";
   src: url(./assets/fonts/Pacifico-Regular.ttf);
 }
 
 @font-face {
-  font-family: 'Text';
+  font-family: "Text";
   src: url(./assets/fonts/JosefinSans-VariableFont_wght.ttf);
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Text';
+  font-family: "Text";
 }

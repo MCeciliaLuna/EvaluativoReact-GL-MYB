@@ -12,11 +12,11 @@
   justify-content: center;
 }
 
-.containertext {
+.containerText {
   padding: 1em;
 }
 
-.welcometext {
+.welcomeText {
   font-size: 1.7rem;
   margin: 0.5em;
 }
@@ -25,7 +25,7 @@
   text-transform: uppercase;
 }
 
-.welcomesecondtext {
+.welcomeSecondText {
   font-size: 1.2rem;
   margin: 0.2em;
 }
@@ -35,11 +35,11 @@
     height: 50vh;
   }
 
-  .welcometext {
+  .welcomeText {
     font-size: 2.5rem;
   }
 
-  .welcomesecondtext {
+  .welcomeSecondText {
     font-size: 1.5rem;
     margin-right: 1em;
   }
@@ -51,11 +51,11 @@
     background-position: center;
   }
 
-  .welcometext {
+  .welcomeText {
     font-size: 2.3rem;
   }
 
-  .welcomesecondtext {
+  .welcomeSecondText {
     font-size: 1.5rem;
     margin-right: 1em;
   }

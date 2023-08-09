@@ -37,14 +37,14 @@ const Navbar = () => {
       <NavLink className={styles.logo} to="/home">
         WeLearn💡
       </NavLink>
-      <div className={styles.linkscontainer}>
-        <NavLink className={styles.navlink} onClick={back}>
+      <div className={styles.linksContainer}>
+        <NavLink className={styles.navLink} onClick={back}>
           {backIcon}
         </NavLink>
-        <NavLink className={styles.navlink} to="/chatroom">
+        <NavLink className={styles.navLink} to="/chatroom">
           {chatIcon}
         </NavLink>
-        <NavLink className={styles.navlink} onClick={logout}>
+        <NavLink className={styles.navLink} onClick={logout}>
           {outSesionIcon}
         </NavLink>
       </div>

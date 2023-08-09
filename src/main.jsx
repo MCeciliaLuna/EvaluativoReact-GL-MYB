@@ -9,7 +9,6 @@ import ErrorPage from "./error-page";
 import ChatRoomPage from "./routes/ChatRoomPage";
 import { videos } from "../src/api/videosArray";
 
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,7 +24,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: ":category",
-        element: <SelectedCategoryPage videoData={videos} />
+        element: <SelectedCategoryPage videoData={videos} />,
       },
     ],
   },

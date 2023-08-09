@@ -3,7 +3,6 @@ import Navbar from "../components/Navbar";
 import ChatWelcome from "../components/ChatWelcome";
 import { Navigate } from "react-router-dom";
 import ChatSection from "../components/ChatSection";
-import styles from '../styles/ChatRoomPage.module.css';
 const ChatRoomPage = () => {
   const login = loginStore((state) => state.login);
 
@@ -13,11 +12,9 @@ const ChatRoomPage = () => {
 
   return (
     <>
-    <Navbar />
-    <section className={styles.section}>
-  <ChatWelcome />
-  <ChatSection />
-  </section>
+      <Navbar />
+      <ChatWelcome />
+      <ChatSection />
     </>
   );
 };
