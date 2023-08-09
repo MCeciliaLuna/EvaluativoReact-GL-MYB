@@ -36,17 +36,7 @@ Este proyecto es una aplicación web desarrollada en React que muestra una pági
 
 ## 🎞 Capturas de Pantalla 🎞
 
-![Vista de la página principal](https://i.ibb.co/tYQmz7J/1-loguin.png)
-  
-  ![Formulario de Login](https://i.ibb.co/f9mpCKf/2-formulario.png)
- 
- ![Página de Bienvenida](https://i.ibb.co/cN1jyYc/3-bienvenida.png)
- 
-![Filtro de Búsqueda](https://i.ibb.co/RhfJYvN/4-filtro-de-busqueda.png)
 
-![Sala de Chat](https://i.ibb.co/tcH8JXc/5-sala-de-chat.png)
-
-![Caja de comentarios](https://i.ibb.co/2vGXSrv/6-caja-de-comentarios.png)
 
 
 
