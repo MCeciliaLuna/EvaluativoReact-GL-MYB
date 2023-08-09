@@ -6,7 +6,7 @@ import MainPage from "./routes/MainPage";
 import HomePage from "./routes/HomePage";
 import SelectedCategoryPage from "./routes/SelectedCategoryPage";
 import ErrorPage from "./error-page";
-import ChatRoom from "./routes/ChatRoom";
+import ChatRoomPage from "./routes/ChatRoomPage";
 import { videos } from "../src/api/videosArray";
 
 
@@ -31,7 +31,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/chatroom",
-    element: <ChatRoom />,
+    element: <ChatRoomPage />,
   },
 ]);
 

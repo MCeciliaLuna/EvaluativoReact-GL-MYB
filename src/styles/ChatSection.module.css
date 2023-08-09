@@ -1,0 +1,99 @@
+.container {
+  background-color: var(--text-light);
+  height: auto;
+    margin: 0 auto;
+  display: flex-end;
+  flex-direction: column;
+  }
+
+.form {
+  background-color: var(--text-light);
+  width: 100vw;
+  margin: 1em 0 1em;
+    height: 6vh;
+    display: flex;
+  justify-content: center;
+  
+  }
+
+.input {
+  width: 70vw;
+  border: var(--text-dark) thin solid;
+  border-radius: 7px;
+  padding: 0.5em;
+}
+
+.containerChat {
+  width: 100vw;
+  display: flex-end;
+  flex-direction: column-reverse;
+  align-self: stretch;
+  padding: 0 2em;
+}
+
+.ul {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.userMessage {
+  word-wrap: break-word;
+  font-size: 19px;
+  margin: 0;
+  padding: 0.5em 0.5em 0.6em;
+  color: var(--text-light);
+}
+
+.color1 {
+  max-width: 80%;
+  min-width: 15%;
+  margin: 0.2em 0;
+}
+
+.color2 {
+  max-width: 80%;
+  min-width: 15%;
+  align-self: flex-start;
+  margin: 0.2em 0;
+}
+
+.chat1 {
+  background-color: var(--text-intermediate);
+  border-radius: 0.5rem;
+  padding: 0.1em;
+}
+
+.chat2 {
+  background-color: var(--background);
+  padding: 0.1em;
+  border-radius: 0.5rem;
+}
+
+.user1 {
+  display: none;
+}
+
+.user2 {
+  color: var(--text-light);
+  font-size: 1rem;
+  margin: 0;
+  padding: 0.7em 0.5em 0 0.5em;
+  text-decoration-line: underline;
+}
+
+.button {
+  border: 0;
+  background-color: var(--text-light);
+}
+
+.buttonIcon {
+  color: var(--text-dark);
+  font-size: 1.9rem;
+  border: 0;
+}
