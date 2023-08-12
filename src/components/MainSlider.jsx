@@ -16,8 +16,8 @@ const MainSlider = () => {
         showThumbs={false}
         className={styles.carousel}
       >
-        {lastThreeVideos.map((video, index) => (
-          <div key={index} className={styles.card}>
+        {lastThreeVideos.map((video) => (
+          <div key={video.category} className={styles.card}>
             <img src={video.image} alt="portada-video" />
 
             <article className={styles.textVideos}>

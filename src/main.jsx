@@ -8,6 +8,7 @@ import SelectedCategoryPage from "./routes/SelectedCategoryPage";
 import ErrorPage from "./error-page";
 import ChatRoomPage from "./routes/ChatRoomPage";
 import { videos } from "../src/api/videosArray";
+import { DarkModeProvider } from "../src/context/index";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    <DarkModeProvider>
     <RouterProvider router={router} />
+    </DarkModeProvider>
   </React.StrictMode>
 );

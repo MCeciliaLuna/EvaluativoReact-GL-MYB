@@ -5,6 +5,7 @@ import VideoSelected from "../components/VideoSelected";
 import VideoComments from "../components/VideoComments";
 import loginStore from "../store/loginStore";
 import styles from "../styles/SelectedCategoryPage.module.css";
+import ButtonDarkMode from "../components/ButtonDarkMode";
 
 const SelectedCategoryPage = ({ videoData }) => {
   const login = loginStore((state) => state.login);
@@ -19,6 +20,7 @@ const SelectedCategoryPage = ({ videoData }) => {
 
   return (
     <>
+    <ButtonDarkMode />
       <Navbar />
       <VideoSelected videoSelected={videoSelected} />
       <section className={styles.container}>

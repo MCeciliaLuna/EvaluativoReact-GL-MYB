@@ -5,6 +5,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  height: 97vh;
 }
 
 .title {
@@ -33,13 +34,15 @@
     justify-content: space-around;
   }
   .imageVideo {
-    width: 40vw;
+    width: 75vw;
   }
 }
 
 @media (min-width: 1024px) {
   .sectionVideos {
     justify-content: space-around;
+    align-content:flex-start;
+    height: 76vh;
   }
   .title {
     width: 90vw;

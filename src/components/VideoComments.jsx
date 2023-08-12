@@ -14,7 +14,7 @@ const VideoComments = () => {
   const [comments, setComments] = useState([]);
   const [characters, setCharacters] = useState("");
   const [loadingComments, setLoadingComments] = useState(true);
-  const [setCopied] = useState(false);
+  const [copied, setCopied] = useState(false);
   const commentUser = useRef(null);
   const userName = sessionStorage.getItem("userName");
   const userEmail = sessionStorage.getItem("userEmail");
@@ -70,15 +70,15 @@ const VideoComments = () => {
   };
 
   const copiedEmail = (event) => {
+    () => event.preventDefault();
     Swal.fire({
       title: "Copiaste su mail al portatapeles",
       text: "¡Puedes contactar a este usuario personalmente para compartir más conocimientos! 🚀",
       confirmButtonColor: "var(--background)",
       confirmButtonText: "Entendido",
     });
-
+    
     setCopied(true);
-    event.preventDefault();
   };
 
   useEffect(() => {
@@ -117,8 +117,8 @@ const VideoComments = () => {
             <p className={styles.loader}>Cargando comentarios...</p>
           </span>
         ) : (
-          comments?.map((comment, index) => (
-            <Card className={styles.card} key={index}>
+          comments?.map((comment) => (
+            <Card className={styles.card} key={comment._id}>
               <CardContent className={styles.commentsData}>
                 <Typography sx={{ fontSize: 20 }} variant="h5" component="div">
                   {comment.userName} dice:

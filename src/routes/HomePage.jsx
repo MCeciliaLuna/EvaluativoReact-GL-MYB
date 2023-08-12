@@ -6,6 +6,7 @@ import HomeCategories from "../components/HomeCategories";
 import loginStore from "../store/loginStore";
 import { Navigate } from "react-router-dom";
 import styles from "../styles/HomePage.module.css";
+import ButtonDarkMode from "../components/ButtonDarkMode";
 
 const HomePage = ({ videoData }) => {
   const login = loginStore((state) => state.login);
@@ -16,6 +17,7 @@ const HomePage = ({ videoData }) => {
 
   return (
     <>
+    <ButtonDarkMode />
       <Navbar />
       <HomeWelcome />
       <HomeVideos videoData={videoData} />

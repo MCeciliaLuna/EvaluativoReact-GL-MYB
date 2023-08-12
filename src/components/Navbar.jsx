@@ -37,7 +37,7 @@ const Navbar = () => {
       <NavLink className={styles.logo} to="/home">
         WeLearn💡
       </NavLink>
-      <div className={styles.linksContainer}>
+            <div className={styles.linksContainer}>
         <NavLink className={styles.navLink} onClick={back}>
           {backIcon}
         </NavLink>

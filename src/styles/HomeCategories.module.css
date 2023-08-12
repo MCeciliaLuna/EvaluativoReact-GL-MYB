@@ -1,7 +1,7 @@
 .section {
   margin: 1em;
   background-color: var(--text-light);
-  height: 30vh;
+  height: 35vh;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -37,7 +37,7 @@
 
 @media (min-width: 1024px) {
   .section {
-    height: 40vh;
+    height: 43vh;
   }
   .category {
     font-size: 1.1rem;

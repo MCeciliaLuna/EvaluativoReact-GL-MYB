@@ -10,8 +10,8 @@ const HomeVideos = ({ videoData }) => {
       <h3 className={styles.title}>
         ¿Sobre qué se está hablando en WeLearn💡?
       </h3>
-      {twoRandomVideos.map((video, index) => (
-        <div key={index}>
+      {twoRandomVideos.map((video) => (
+        <div key={video.category}>
           <h5 className={styles.categoryVideo}>{video.category}</h5>
           <Link to={`/selectedcategory/${video.category}`}>
             <img
