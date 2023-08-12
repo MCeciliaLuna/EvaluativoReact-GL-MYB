@@ -9,6 +9,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import CopyToClipboard from "react-copy-to-clipboard";
 import Swal from "sweetalert2";
+import { getComments, createComment } from "../api/commentsApi";
 
 const VideoComments = () => {
   const [comments, setComments] = useState([]);
@@ -21,19 +22,10 @@ const VideoComments = () => {
   const minLength = 150;
   const maxLength = 600;
 
-  const getComments = async () => {
-    try {
-      const response = await axios.get(
-        "https://welearnwebapi.onrender.com/getcomments"
-      );
-      const data = response.data;
-      data.reverse();
-      setComments(data);
-      setLoadingComments(false);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
+  const handleComments = () => {
+    getComments(setComments, setLoadingComments);
   };
+
 
   const countCharacters = () => {
     const commentCharacters = commentUser.current.value;
@@ -42,32 +34,17 @@ const VideoComments = () => {
     }
   };
 
-  const commentData = async (event) => {
+  const handleCreateComment = (event) => {
     event.preventDefault();
     if (commentUser.current.value.length > minLength) {
-      const comment = {
-        userName: userName,
-        email: userEmail,
-        comment: commentUser.current.value,
-      };
-      try {
-        const response = await axios.post(
-          "https://welearnwebapi.onrender.com/createComments",
-          comment
-        );
-        const data = response.data;
-        commentUser.current.value = "";
-        getComments();
-      } catch (error) {
-        console.error(error);
-      }
+      createComment(userName, userEmail, commentUser, handleComments);
       toast("¡Tu comentario fue publicado! ✅", {
         duration: 6000,
       });
     } else {
       toast.error("Ingresá un comentario más extenso");
     }
-  };
+  }
 
   const copiedEmail = (event) => {
     () => event.preventDefault();
@@ -82,7 +59,7 @@ const VideoComments = () => {
   };
 
   useEffect(() => {
-    getComments();
+    handleComments();
   }, []);
 
   return (
@@ -105,7 +82,7 @@ const VideoComments = () => {
           <p className={styles.countCharacters}>
             {maxLength - characters.length}/{maxLength}
           </p>
-          <button className={styles.button} onClick={commentData}>
+          <button className={styles.button} onClick={handleCreateComment}>
             Comentar
           </button>
         </div>
