@@ -15,7 +15,7 @@ const ChatRoomPage = () => {
 
   return (
     <>
-                       <ButtonDarkMode />
+      <ButtonDarkMode />
       <Navbar />
       <ChatWelcome />
       <ChatSection />

@@ -2,6 +2,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styles from "../styles/MainSlider.module.css";
 import { videos } from "../api/videosArray";
+import { Fade } from "react-awesome-reveal";
 
 const MainSlider = () => {
   const lastThreeVideos = videos.slice(Math.max(videos.length - 3, 0));
@@ -18,6 +19,7 @@ const MainSlider = () => {
       >
         {lastThreeVideos.map((video) => (
           <div key={video.category} className={styles.card}>
+            <Fade cascade damping={0.1} triggerOnce>
             <img src={video.image} alt="portada-video" />
 
             <article className={styles.textVideos}>
@@ -27,6 +29,7 @@ const MainSlider = () => {
                 <i>{video.category}</i>
               </p>
             </article>
+        </Fade>
           </div>
         ))}
       </Carousel>
@@ -36,9 +39,10 @@ const MainSlider = () => {
         showStatus={false}
         showThumbs={false}
         className={styles.secondCarousel}
-      >
+        >
         {firstThreeVideos.map((video, index) => (
           <div key={index} className={styles.secondCard}>
+            <Fade cascade damping={0.4} triggerOnce>
             <img src={video.image} alt="portada-video" />
             <article className={styles.secondTextVideos}>
               <h3>{video.title}</h3>
@@ -47,9 +51,11 @@ const MainSlider = () => {
                 <i>{video.category}</i>
               </p>
             </article>
+            </Fade>
           </div>
         ))}
       </Carousel>
+        
     </section>
   );
 };

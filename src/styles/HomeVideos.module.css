@@ -29,6 +29,10 @@
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
+.imageVideo:hover{
+  transform: scale(1.02);
+}
+
 @media (min-width: 768px) and (max-width: 1023px) {
   .sectionVideos {
     justify-content: space-around;
@@ -41,8 +45,8 @@
 @media (min-width: 1024px) {
   .sectionVideos {
     justify-content: space-around;
-    align-content:flex-start;
-    height: 76vh;
+    align-items: center;
+    height: 85vh;
   }
   .title {
     width: 90vw;
