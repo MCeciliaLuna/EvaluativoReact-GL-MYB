@@ -4,13 +4,11 @@ import Login from "../components/Login";
 import MainSlider from "../components/MainSlider";
 import MainPresentation from "../components/MainPresentation";
 import styles from "../styles/MainPage.module.css";
-import ButtonDarkMode from "../components/ButtonDarkMode";
 
 const MainPage = () => {
   return (
     <>
-    <ButtonDarkMode /> 
-      <MainPresentation />
+          <MainPresentation />
       <MainDescriptionCards />
       <section className={styles.container}>
         <div className={styles.wave}></div>

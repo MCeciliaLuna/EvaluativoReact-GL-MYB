@@ -2,6 +2,8 @@ import io from "socket.io-client";
 import { useState, useEffect } from "react";
 import styles from "../styles/ChatSection.module.css";
 import { MdSend } from "react-icons/md";
+import { useContext } from "react";
+import { DarkModeContext } from "../context/index";
 
 const storedUsername = sessionStorage.getItem("userName");
 const socket = io("https://chat-socket-r9w3.onrender.com", {
@@ -13,6 +15,7 @@ const socket = io("https://chat-socket-r9w3.onrender.com", {
 const ChatRoomPage = () => {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
+  const [darkMode, setDarkMode] = useContext(DarkModeContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -39,7 +42,7 @@ const ChatRoomPage = () => {
 
   return (
     <>
-      <section className={styles.section}>
+      <section className={styles.section} style={{ backgroundColor: darkMode ? "#f7f7f2" : null }}>
         <div className={styles.container}>
           <div className={styles.containerChat}>
             <ul className={styles.ul}>
@@ -74,6 +77,7 @@ const ChatRoomPage = () => {
               type="text"
               onChange={(e) => setMessage(e.target.value)}
               value={message}
+              style={{ backgroundColor: darkMode ? "#f7f7f2" : null }}
             />
             <button className={styles.button}>
               <MdSend className={styles.buttonIcon} />

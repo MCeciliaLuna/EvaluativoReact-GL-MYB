@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 import styles from "../styles/HomeCategories.module.css";
+import { useContext } from "react";
+import { DarkModeContext } from "../context/index";
 
 const HomeCategories = ({ videoData }) => {
+const [darkMode, setDarkMode] = useContext(DarkModeContext);
   return (
-    <section className={styles.section}>
+    <section className={styles.section} style={{ backgroundColor: darkMode ? "#f7f7f2" : null }}>
       <h2 className={styles.title}>Buscá por temática:</h2>
       <div className={styles.categories}>
         {videoData.map((video, index) => (

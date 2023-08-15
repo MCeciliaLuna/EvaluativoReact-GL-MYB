@@ -1,9 +1,12 @@
 import styles from "../styles/VideoSelected.module.css";
 import { Button } from "@mui/material";
+import { useContext } from "react";
+import { DarkModeContext } from "../context/index";
 
 const VideoSelected = ({ videoSelected }) => {
+  const [darkMode, setDarkMode] = useContext(DarkModeContext);
   return (
-    <section className={styles.section}>
+    <section className={styles.section} style={{ backgroundColor: darkMode ? "#f7f7f2" : null }}>
       <img
         src={videoSelected.image}
         alt="portada-video"
