@@ -33,6 +33,10 @@ const router = createBrowserRouter([
     path: "/chatroom",
     element: <ChatRoomPage />,
   },
+  {
+    path: "/*",
+    element: <ErrorPage />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

@@ -3,7 +3,7 @@ import { DarkModeContext } from "../context";
 import { styled } from "@mui/material/styles";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
-import style from '../styles/ButtonDarkMode.module.css'
+import style from '../styles/ButtonDarkMode.module.css';
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,

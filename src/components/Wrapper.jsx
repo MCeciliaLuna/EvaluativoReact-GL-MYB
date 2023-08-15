@@ -7,15 +7,17 @@ import ChatSection from "./ChatSection"
 import Footer from "./Footer";
 
 const Wrapper = () => {
-  const [darkMode, setDarkMode] = useContext(DarkModeContext);
+  // const [darkMode, setDarkMode] = useContext(DarkModeContext);
   return (
-    <section style={{ backgroundColor: darkMode ? "#d9d9d9" : "#fefcfb" }}>
+    <>
+    {/* // <section style={{ -webkit-text-stroke: darkMode ? "2px black" : null }}> */}
       <Navbar />
       <ChatWelcome />
       <ButtonDarkMode />
       <ChatSection />
       <Footer />
-    </section>
+      </>
+    {/* // </section> */}
   );
 };
 
