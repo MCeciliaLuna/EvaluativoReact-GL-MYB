@@ -6,7 +6,7 @@ const HomeVideos = ({ videoData }) => {
   const twoRandomVideos = randomVideos.slice(0, 2);
 
   return (
-    <section className={styles.sectionVideos}>
+    <section className={styles.sectionVideos} >
       <h3 className={styles.title}>
         ¿Sobre qué se está hablando en WeLearn💡?
       </h3>

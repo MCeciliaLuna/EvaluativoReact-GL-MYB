@@ -10,6 +10,9 @@ import Typography from "@mui/material/Typography";
 import CopyToClipboard from "react-copy-to-clipboard";
 import Swal from "sweetalert2";
 import { getComments, createComment } from "../api/commentsApi";
+import { useContext } from "react";
+import { DarkModeContext } from "../context/index";
+
 
 const VideoComments = () => {
   const [comments, setComments] = useState([]);
@@ -17,8 +20,11 @@ const VideoComments = () => {
   const [loadingComments, setLoadingComments] = useState(true);
   const [copied, setCopied] = useState(false);
   const commentUser = useRef(null);
+  const [darkMode, setDarkMode] = useContext(DarkModeContext);
+
   const userName = sessionStorage.getItem("userName");
   const userEmail = sessionStorage.getItem("userEmail");
+
   const minLength = 150;
   const maxLength = 600;
 
@@ -77,6 +83,7 @@ const VideoComments = () => {
           minLength={minLength}
           maxLength={maxLength}
           onChange={() => countCharacters()}
+          style={{ backgroundColor: darkMode ? "#f7f7f2" : null }}
         />
         <div className={styles.commentButtonContainer}>
           <p className={styles.countCharacters}>
@@ -95,7 +102,7 @@ const VideoComments = () => {
           </span>
         ) : (
           comments?.map((comment) => (
-            <Card className={styles.card} key={comment._id}>
+            <Card className={styles.card} key={comment._id} style={{ backgroundColor: darkMode ? "#f7f7f2" : null }}>
               <CardContent className={styles.commentsData}>
                 <Typography sx={{ fontSize: 20 }} variant="h5" component="div">
                   {comment.userName} dice:
