@@ -103,8 +103,7 @@
 
 .commentText {
   word-wrap: break-word;
-  word-break: break-all;
-}
+  }
 
 .emailContact {
   display: flex;
@@ -115,43 +114,6 @@
 
 .emailDirect {
   text-decoration: none;
-}
-
-.container {
-  position: relative;
-  background: var(--text-light);
-  height: 2vh;
-}
-
-.wave {
-  position: absolute;
-  height: 34px;
-  width: 100%;
-  background: var(--text-light);
-  bottom: 0;
-}
-
-.wave::before,
-.wave::after {
-  content: "";
-  display: block;
-  position: absolute;
-  border-radius: 100% 60%;
-}
-
-.wave::before {
-  width: 57%;
-  height: 100%;
-  background-color: var(--text-intermediate);
-  right: 0%;
-  top: 60%;
-}
-.wave::after {
-  width: 50%;
-  height: 100%;
-  background-color: var(--text-light);
-  left: -1.5%;
-  top: 34%;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {

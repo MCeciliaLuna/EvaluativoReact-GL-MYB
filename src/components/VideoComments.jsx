@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useEffect, useState, useRef } from "react";
 import styles from "../styles/VideoComments.module.css";
 import toast, { Toaster } from "react-hot-toast";
@@ -10,6 +9,8 @@ import Typography from "@mui/material/Typography";
 import CopyToClipboard from "react-copy-to-clipboard";
 import Swal from "sweetalert2";
 import { getComments, createComment } from "../api/commentsApi";
+import { useContext } from "react";
+import { DarkModeContext } from "../context";
 
 const VideoComments = () => {
   const [comments, setComments] = useState([]);
@@ -17,6 +18,7 @@ const VideoComments = () => {
   const [loadingComments, setLoadingComments] = useState(true);
   const [copied, setCopied] = useState(false);
   const commentUser = useRef(null);
+  const [darkMode, setDarkMode] = useContext(DarkModeContext);
 
   const userName = sessionStorage.getItem("userName");
   const userEmail = sessionStorage.getItem("userEmail");
@@ -79,6 +81,7 @@ const VideoComments = () => {
           minLength={minLength}
           maxLength={maxLength}
           onChange={() => countCharacters()}
+          style={{ backgroundColor: darkMode ? "#d9dcd6" : null }}
            />
         <div className={styles.commentButtonContainer}>
           <p className={styles.countCharacters}>
@@ -97,7 +100,7 @@ const VideoComments = () => {
           </span>
         ) : (
           comments?.map((comment) => (
-            <Card className={styles.card} key={comment._id}>
+            <Card className={styles.card} key={comment._id} style={{ backgroundColor: darkMode ? "#d9dcd6" : null }}>
               <CardContent className={styles.commentsData}>
                 <Typography sx={{ fontSize: 20 }} variant="h5" component="div">
                   {comment.userName} dice:
@@ -106,9 +109,6 @@ const VideoComments = () => {
                   {comment.comment}
                 </Typography>
               </CardContent>
-              <section className={styles.container}>
-                <div className={styles.wave}></div>
-              </section>
               <CardActions className={styles.emailContact}>
                 <CopyToClipboard text={comment.email}>
                   <Button

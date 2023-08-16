@@ -5,10 +5,13 @@ import chatIcon from "../assets/images/chatIcon";
 import backIcon from "../assets/images/backIcon";
 import outSesionIcon from "../assets/images/outSesionIcon";
 import Swal from "sweetalert2";
+import { useContext } from "react";
+import { DarkModeContext } from "../context";
 
 const Navbar = () => {
   const setLogin = loginStore((state) => state.setLogin);
   const navigate = useNavigate();
+  const [darkMode, setDarkMode] = useContext(DarkModeContext);
 
   const logout = () => {
     Swal.fire({
@@ -33,7 +36,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={styles.navbar}>
+    <nav className={styles.navbar} style={{ backgroundColor: darkMode ? "#034078" : null }}>
       <NavLink className={styles.logo} to="/home">
         WeLearn💡
       </NavLink>
