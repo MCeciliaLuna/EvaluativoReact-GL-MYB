@@ -81,7 +81,7 @@ const VideoComments = () => {
           minLength={minLength}
           maxLength={maxLength}
           onChange={() => countCharacters()}
-          style={{ backgroundColor: darkMode ? "#d9dcd6" : null }}
+          style={{ backgroundColor: darkMode ? "#b8d0eb" : null }}
            />
         <div className={styles.commentButtonContainer}>
           <p className={styles.countCharacters}>
@@ -100,7 +100,7 @@ const VideoComments = () => {
           </span>
         ) : (
           comments?.map((comment) => (
-            <Card className={styles.card} key={comment._id} style={{ backgroundColor: darkMode ? "#d9dcd6" : null }}>
+            <Card className={styles.card} key={comment._id} style={{ backgroundColor: darkMode ? "#b8d0eb" : null }}>
               <CardContent className={styles.commentsData}>
                 <Typography sx={{ fontSize: 20 }} variant="h5" component="div">
                   {comment.userName} dice:

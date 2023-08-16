@@ -42,7 +42,7 @@ const ChatRoomPage = () => {
 
   return (
     <>
-      <section className={styles.section} style={{ backgroundColor: darkMode ? "#f7f7f2" : null }}>
+      <section className={styles.section} style={{ backgroundColor: darkMode ? "#b8d0eb" : "var(--text-light)" }}>
         <div className={styles.container}>
           <div className={styles.containerChat}>
             <ul className={styles.ul}>

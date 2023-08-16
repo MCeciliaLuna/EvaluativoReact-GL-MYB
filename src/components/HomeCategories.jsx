@@ -6,7 +6,7 @@ import { DarkModeContext } from "../context";
 const HomeCategories = ({ videoData }) => {
   const [darkMode, setDarkMode] = useContext(DarkModeContext);
   return (
-    <section className={styles.section} style={{ backgroundColor: darkMode ? "#d9dcd6" : null }}>
+    <section className={styles.section} style={{ backgroundColor: darkMode ? "#b8d0eb" : null }}>
              <h2 className={styles.title}>Buscá por temática:</h2>
             <div className={styles.categories}>
         {videoData.map((video, index) => (
