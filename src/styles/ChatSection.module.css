@@ -1,7 +1,10 @@
 body {
-  text-align: center;
   background-color: var(--text-dark);
 }
+.section {
+  text-align: center;
+}
+
 .container {
   height: 55vh;
   width: 80%;

@@ -9,14 +9,14 @@ import ButtonDarkMode from "../components/ButtonDarkMode";
 
 const HomePage = ({ videoData }) => {
   const login = loginStore((state) => state.login);
-  
+
   if (!login) {
     return <Navigate to="/" />;
   }
 
   return (
     <>
-    <ButtonDarkMode />
+      <ButtonDarkMode />
       <Navbar />
       <HomeWelcome />
       <HomeVideos videoData={videoData} />

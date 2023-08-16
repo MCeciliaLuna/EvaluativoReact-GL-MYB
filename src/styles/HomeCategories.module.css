@@ -29,7 +29,7 @@
   text-transform: uppercase;
 }
 
-.category:hover{
+.category:hover {
   color: var(--background);
 }
 

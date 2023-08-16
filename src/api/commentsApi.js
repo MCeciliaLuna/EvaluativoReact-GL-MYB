@@ -14,7 +14,12 @@ export const getComments = async (setComments, setLoadingComments) => {
   }
 };
 
-export const createComment = async (userName, userEmail, commentUser, getComments) => {
+export const createComment = async (
+  userName,
+  userEmail,
+  commentUser,
+  getComments
+) => {
   const comment = {
     userName: userName,
     email: userEmail,

@@ -11,7 +11,7 @@ export default function ErrorPage() {
         <h1 className={styles.title}>¡Ups!</h1>
         <p className={styles.subtitle}>No hemos encontrado lo que buscabas.</p>
         <Link to="/">
-        <button className={styles.button}>Volver al inicio</button>
+          <button className={styles.button}>Volver al inicio</button>
         </Link>
       </section>
     </div>

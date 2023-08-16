@@ -42,34 +42,34 @@ const Login = () => {
     <section id="login-form" className={styles.section}>
       <div className={styles.cover}></div>
       <Toaster />
-              <h2 className={styles.title}>Ingresá</h2>
-        <form className={styles.form}>
-          <TextField
-            required
-            id="standard-basic"
-            variant="standard"
-            label="Nombre de usuario"
-            inputRef={usernameRef}
-            inputProps={{ maxLength: "15" }}
-          />
-          <br />
-          <TextField
-            required
-            id="standard-basic"
-            variant="standard"
-            label="Email"
-            inputRef={emailRef}
-            inputProps={{ maxLength: "30" }}
-          />
-          <button
-            className={styles.button}
-            type="button"
-            onClick={() => submitData()}
-          >
-            Iniciar sesión
-          </button>
-        </form>
-          </section>
+      <h2 className={styles.title}>Ingresá</h2>
+      <form className={styles.form}>
+        <TextField
+          required
+          id="standard-basic"
+          variant="standard"
+          label="Nombre de usuario"
+          inputRef={usernameRef}
+          inputProps={{ maxLength: "15" }}
+        />
+        <br />
+        <TextField
+          required
+          id="standard-basic"
+          variant="standard"
+          label="Email"
+          inputRef={emailRef}
+          inputProps={{ maxLength: "30" }}
+        />
+        <button
+          className={styles.button}
+          type="button"
+          onClick={() => submitData()}
+        >
+          Iniciar sesión
+        </button>
+      </form>
+    </section>
   );
 };
 

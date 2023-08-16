@@ -19,10 +19,10 @@ const SelectedCategoryPage = ({ videoData }) => {
 
   return (
     <>
-    <ButtonDarkMode />
+      <ButtonDarkMode />
       <Navbar />
       <VideoSelected videoSelected={videoSelected} />
-          <VideoComments />
+      <VideoComments />
       <Footer />
     </>
   );

@@ -30,7 +30,6 @@ const VideoComments = () => {
     getComments(setComments, setLoadingComments);
   };
 
-
   const countCharacters = () => {
     const commentCharacters = commentUser.current.value;
     if (commentCharacters.length <= maxLength) {
@@ -48,7 +47,7 @@ const VideoComments = () => {
     } else {
       toast.error("Ingresá un comentario más extenso");
     }
-  }
+  };
 
   const copiedEmail = (event) => {
     () => event.preventDefault();
@@ -58,7 +57,7 @@ const VideoComments = () => {
       confirmButtonColor: "var(--background)",
       confirmButtonText: "Entendido",
     });
-    
+
     setCopied(true);
   };
 
@@ -82,7 +81,7 @@ const VideoComments = () => {
           maxLength={maxLength}
           onChange={() => countCharacters()}
           style={{ backgroundColor: darkMode ? "#b8d0eb" : null }}
-           />
+        />
         <div className={styles.commentButtonContainer}>
           <p className={styles.countCharacters}>
             {maxLength - characters.length}/{maxLength}
@@ -100,7 +99,11 @@ const VideoComments = () => {
           </span>
         ) : (
           comments?.map((comment) => (
-            <Card className={styles.card} key={comment._id} style={{ backgroundColor: darkMode ? "#b8d0eb" : null }}>
+            <Card
+              className={styles.card}
+              key={comment._id}
+              style={{ backgroundColor: darkMode ? "#b8d0eb" : null }}
+            >
               <CardContent className={styles.commentsData}>
                 <Typography sx={{ fontSize: 20 }} variant="h5" component="div">
                   {comment.userName} dice:

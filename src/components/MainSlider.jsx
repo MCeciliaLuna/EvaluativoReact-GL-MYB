@@ -18,7 +18,7 @@ const MainSlider = () => {
       >
         {lastThreeVideos.map((video) => (
           <div key={video.category} className={styles.card}>
-                        <img src={video.image} alt="portada-video" />
+            <img src={video.image} alt="portada-video" />
 
             <article className={styles.textVideos}>
               <h3>{video.title}</h3>
@@ -27,7 +27,7 @@ const MainSlider = () => {
                 <i>{video.category}</i>
               </p>
             </article>
-                  </div>
+          </div>
         ))}
       </Carousel>
       <Carousel
@@ -36,10 +36,10 @@ const MainSlider = () => {
         showStatus={false}
         showThumbs={false}
         className={styles.secondCarousel}
-        >
+      >
         {firstThreeVideos.map((video, index) => (
           <div key={index} className={styles.secondCard}>
-                        <img src={video.image} alt="portada-video" />
+            <img src={video.image} alt="portada-video" />
             <article className={styles.secondTextVideos}>
               <h3>{video.title}</h3>
               <p className={styles.secondp}>{video.description}</p>
@@ -47,10 +47,9 @@ const MainSlider = () => {
                 <i>{video.category}</i>
               </p>
             </article>
-                      </div>
+          </div>
         ))}
       </Carousel>
-        
     </section>
   );
 };

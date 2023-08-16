@@ -5,8 +5,11 @@ import { DarkModeContext } from "../context";
 
 const VideoSelected = ({ videoSelected }) => {
   const [darkMode, setDarkMode] = useContext(DarkModeContext);
-    return (
-    <section className={styles.section} style={{ backgroundColor: darkMode ? "#b8d0eb" : null }}>
+  return (
+    <section
+      className={styles.section}
+      style={{ backgroundColor: darkMode ? "#b8d0eb" : null }}
+    >
       <img
         src={videoSelected.image}
         alt="portada-video"

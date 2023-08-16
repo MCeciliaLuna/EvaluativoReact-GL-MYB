@@ -3,7 +3,7 @@ import { DarkModeContext } from "../context";
 import { styled } from "@mui/material/styles";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
-import style from '../styles/ButtonDarkMode.module.css';
+import style from "../styles/ButtonDarkMode.module.css";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -23,13 +23,13 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
       },
       "& + .MuiSwitch-track": {
         opacity: 1,
-        backgroundColor:
-          theme.palette.mode === "dark" ? "#8796A5" : "#aab4be",
+        backgroundColor: theme.palette.mode === "dark" ? "#8796A5" : "#aab4be",
       },
     },
   },
   "& .MuiSwitch-thumb": {
-    backgroundColor: theme.palette.mode === "dark" ? "#003892" : "var(--background)",
+    backgroundColor:
+      theme.palette.mode === "dark" ? "#003892" : "var(--background)",
     width: 32,
     height: 32,
     "&:before": {
@@ -57,10 +57,15 @@ const ButtonDarkMode = () => {
   const [darkMode, setDarkMode] = useContext(DarkModeContext);
   return (
     <>
-      <FormControlLabel className={style.button}
-      
-        control={<MaterialUISwitch checked={darkMode}
-        onChange={() => setDarkMode(!darkMode)}  sx={{ m: 1 }} />}
+      <FormControlLabel
+        className={style.button}
+        control={
+          <MaterialUISwitch
+            checked={darkMode}
+            onChange={() => setDarkMode(!darkMode)}
+            sx={{ m: 1 }}
+          />
+        }
       />
     </>
   );

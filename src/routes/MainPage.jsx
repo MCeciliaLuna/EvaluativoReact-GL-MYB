@@ -7,9 +7,9 @@ import MainPresentation from "../components/MainPresentation";
 const MainPage = () => {
   return (
     <>
-          <MainPresentation />
+      <MainPresentation />
       <MainDescriptionCards />
-            <MainSlider />
+      <MainSlider />
       <Login />
       <Footer />
     </>

@@ -9,7 +9,10 @@ const HomeVideos = ({ videoData }) => {
   const twoRandomVideos = randomVideos.slice(0, 2);
 
   return (
-    <section className={styles.sectionVideos} style={{ backgroundColor: darkMode ? "#034078" : null }}>
+    <section
+      className={styles.sectionVideos}
+      style={{ backgroundColor: darkMode ? "#034078" : null }}
+    >
       <h3 className={styles.title}>
         ¿Sobre qué se está hablando en WeLearn💡?
       </h3>
