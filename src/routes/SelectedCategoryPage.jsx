@@ -4,7 +4,6 @@ import Navbar from "../components/Navbar";
 import VideoSelected from "../components/VideoSelected";
 import VideoComments from "../components/VideoComments";
 import loginStore from "../store/loginStore";
-import styles from "../styles/SelectedCategoryPage.module.css";
 import ButtonDarkMode from "../components/ButtonDarkMode";
 
 const SelectedCategoryPage = ({ videoData }) => {
@@ -23,10 +22,7 @@ const SelectedCategoryPage = ({ videoData }) => {
     <ButtonDarkMode />
       <Navbar />
       <VideoSelected videoSelected={videoSelected} />
-      <section className={styles.container}>
-        <div className={styles.wave}></div>
-      </section>
-      <VideoComments />
+          <VideoComments />
       <Footer />
     </>
   );

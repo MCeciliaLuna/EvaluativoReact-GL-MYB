@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import loginStore from "../store/loginStore";
 import styles from "../styles/Login.module.css";
 import { TextField } from "@mui/material";
-import { Zoom } from "react-awesome-reveal";
 
 const Login = () => {
   const login = loginStore((state) => state.login);
@@ -43,8 +42,7 @@ const Login = () => {
     <section id="login-form" className={styles.section}>
       <div className={styles.cover}></div>
       <Toaster />
-      <Zoom cascade triggerOnce>
-        <h2 className={styles.title}>Ingresá</h2>
+              <h2 className={styles.title}>Ingresá</h2>
         <form className={styles.form}>
           <TextField
             required
@@ -71,8 +69,7 @@ const Login = () => {
             Iniciar sesión
           </button>
         </form>
-      </Zoom>
-    </section>
+          </section>
   );
 };
 
