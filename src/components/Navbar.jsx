@@ -1,6 +1,6 @@
 import loginStore from "../store/loginStore";
 import { useNavigate, NavLink } from "react-router-dom";
-import styles from "../styles/Navbar.module.css";
+import styles from "../styles/navbar.module.css";
 import chatIcon from "../assets/images/chatIcon";
 import backIcon from "../assets/images/backIcon";
 import outSesionIcon from "../assets/images/outSesionIcon";
